@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content">
+
+	<div class="section">
+
+		<h1><a href="/portfolio">Portfolio</a> - Photography</h1>
+		
+		<p>Some of the other content I produce deals with photography. I have taken photos for high school athletics, yearbooks, and Vida Nueva. 
+		Here are some of my favorite photos across the years!</p>
+		<img src="{{ url_for('static', filename='images/portfolio/pics/bball01.jpg') }}">
+		<img src="{{ url_for('static', filename='images/portfolio/pics/bball02.jpg') }}">
+		<br>
+		<img src="{{ url_for('static', filename='images/portfolio/pics/xc01.jpg') }}">
+		<br>
+		
+	</div>
+
+</div>
+{% endblock %}

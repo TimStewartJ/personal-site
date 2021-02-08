@@ -1,0 +1,305 @@
+/* DESKTOP CSS */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+body a:hover 
+{
+	color: #45a29e;
+}
+
+body h1, h2 {
+	color: white;
+	font-weight: 200;
+	opacity: 0.9;
+}
+
+body p, a {
+	color: #c5c6c7;
+}
+
+.container {
+	position: relative;
+	min-height: 100vh;
+	background: #0b0c10;
+}
+
+.content {
+	padding-bottom: 125px;
+}
+
+/* This is stuff that goes in the fixed header */
+
+	.header {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1738;
+		background: #191b23;
+		text-align: center;
+		box-shadow: 0px 1px 3px 0px black;
+		line-height: 40px;
+	}
+
+	.headerholder {
+		height: 90px;
+	}
+
+	/*Just stuff for header links and text*/
+
+		.header a {
+			color: white;
+			text-decoration: none;
+			padding: 17px;
+			transition: color 0.1s linear;	
+		}
+		
+		.header h1 {
+			margin:5px;
+		}
+		
+		#headtitle {
+			font-size: larger;
+		}
+		
+		#headtitle a {
+			color: #66fcf1;
+			padding: 0px;
+		}
+		
+		#headtitle a:hover {
+			color: #45a29e;
+		}
+		
+		#headimg {
+			position: absolute;
+			width: auto;
+			height: 70px;
+			vertical-align: middle;
+			padding: 10px;
+			left: 50%;
+			transform: translate(-325px)
+		}
+		
+		#logoimg {
+			position: absolute;
+			width: auto;
+			height: 70px;
+			vertical-align: middle;
+			padding: 10px;
+			left: 50%;
+			transform: translate(235px)
+		}
+		
+/*Section code */
+
+	.section {
+		position: relative;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	
+	.section img {
+		width: 40%;
+		height: auto;
+		display: inline;
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+	
+	.section iframe {
+		width: 40%;
+		height: 70vh;
+	}
+	
+	.section.bg {
+		//background: #121212;
+		margin: 0;
+		overflow: hidden;
+
+	}
+	
+	.section p {
+		width: 40%;
+		margin: 0 auto;
+	}
+	
+	.section h2 {
+		margin-bottom: 5px;
+	}
+	
+	.section a {
+		transition: color 0.1s linear;
+	}
+	
+	.section.social a {
+		text-decoration: none;
+	}
+	
+	#h2Link {
+		color: white;
+	}
+	
+	#h2Link:hover {
+	color: #45a29e;
+	}
+	
+	#thumb {
+		width: 20%;
+	}
+	
+	/*Stuff for dates specifically*/
+	
+	.date {
+		font-style: italic;
+		color: #8e8e8e;
+		font-size: smaller;
+	}
+
+/*Footer Code*/
+
+	.footer {
+		position: absolute;
+		text-align: center;
+		background: #191b23;
+		color: white;
+		height: 125px;
+		bottom: 0;
+		width: 100%;
+	}
+	
+/*
+  __  __  ____  ____ _____ _      ______    _____  _____ _____ 
+ |  \/  |/ __ \|  _ \_   _| |    |  ____|  / ____|/ ____/ ____|
+ | \  / | |  | | |_) || | | |    | |__    | |    | (___| (___  
+ | |\/| | |  | |  _ < | | | |    |  __|   | |     \___ \\___ \ 
+ | |  | | |__| | |_) || |_| |____| |____  | |____ ____) |___) |
+ |_|  |_|\____/|____/_____|______|______|  \_____|_____/_____/ 
+*/
+
+@media (max-width: 498px) {
+	
+body {
+	padding: 0;
+	margin: 0;
+	font-size:small;
+}
+
+.container {
+	position: relative;
+	min-height: 100vh;
+}
+
+.content {
+	padding-bottom: 100px;
+}
+
+/*(MOBILE) This should be a NON-fixed header */
+
+	.header {
+		line-height: 35px;
+		width: 100%;
+		position: static;
+		z-index: 1738;
+		text-align: center;
+	}
+
+	.headerholder {
+		height: 70px;
+	}
+
+	/*(MOBILE) Just stuff for header links and text*/
+
+		.header a {
+			text-decoration: none;
+			padding: 17px;
+			transition: color 0.1s linear;
+			padding: 5px;
+		}
+		
+		.header h1 {
+			margin: 0px;
+			padding-top: 5px;
+		}
+		
+		#headimg {
+			position: absolute;
+			width: auto;
+			height: 33px;
+			vertical-align: middle;
+			padding: 10px;
+			left: 50%;
+			transform: translate(-140px);
+		}
+		
+		#logoimg {
+			position: absolute;
+			width: auto;
+			height: 33px;
+			vertical-align: middle;
+			padding: 10px;
+			left: 50%;
+			transform: translate(90px)
+		}
+
+/*(MOBILE) Section code */
+
+	.section {
+		position: relative;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	
+	.section img {
+		width: 70%;
+		height: auto;
+		display: inline;
+	}
+	
+	.section iframe {
+		width: 625px;
+		height: 600px;
+	}
+	
+	.section.bg {
+		margin: 0;
+		overflow: hidden;
+
+	}
+	
+	.section h1 {
+		width: 95%;
+	}
+	
+	.section h2 {
+		margin-bottom: 5px;
+	}
+	
+	.section p {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	.section a {
+		transition: color 0.1s linear;
+	}
+	
+	.section.social a {
+		text-decoration: none;
+	}
+
+/*(MOBILE) Footer Code*/
+
+	.footer {
+		position: absolute;
+		text-align: center;
+		color: white;
+		height: 100px;
+		bottom: 0;
+		width: 100%;
+	}
+}

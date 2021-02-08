@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tim's Home on the Web</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v1"/>
+</head>
+
+<body><div class="container">
+
+<!-- 
+Beginning of actual display
+The fixed header
+-->
+
+<div class="headerholder">
+	<div class="header">
+		<img src="{{ url_for('static', filename='images/OffProf.png') }}" id="headimg"/><img src="{{ url_for('static', filename='images/Logo.png') }}" id="logoimg"/><div id="headtitle"><h1><a href="https://timstewartj.com">Tim Stewart</a></h1></div>
+	
+		<nav>
+			<a href="/">Home</a>
+			<a href="/misc">Misc. Pages</a>
+			<a href="/portfolio">Portfolio</a>
+			<a href="/social">Social</a>
+			<a href="/resume">Resume</a>
+		</nav>
+	</div>
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+<!-- The Footer -->
+
+<div class="footer">
+	<h1>The End</h1>
+	<p>All rights reserved 2020.</p>
+</div>
+
+</div>
