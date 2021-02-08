@@ -30,6 +30,7 @@ def misc_UCDplanner():
 def portfolio():
     return render_template('portfolio.html')
 
+"""
 @app.route("/portfolio/web")
 def portfolio_web():
     return render_template('portfolio/web.html')
@@ -41,6 +42,7 @@ def portfolio_design():
 @app.route("/portfolio/pics")
 def portfolio_pics():
     return render_template('portfolio/pics.html')
+"""
 
 @app.route("/social")
 def social():
