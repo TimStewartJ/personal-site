@@ -12,8 +12,4 @@ Then, run `run.py`.
 
 ## Deploying
 
-Make/enter a virtual environment similar to how one would do it locally.
-
-Then, run the flask server through whatever method is prefered.
-
-Example with gunicorn: `gunicorn -b 127.0.0.1:8000 run:app`.
+Build and use the docker image. Website will be run on port 8000.
