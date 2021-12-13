@@ -12,6 +12,10 @@ body a:hover
 	color: #45a29e;
 }
 
+body a {
+	color: #c5c6c7;
+}
+
 body h1, h2 {
 	color: white;
 	font-weight: 200;
