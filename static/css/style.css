@@ -5,6 +5,7 @@ body {
 	color: #c5c6c7;
 	padding: 0;
 	margin: 0;
+	line-height: 1.5em;
 }
 
 body a:hover 
@@ -20,6 +21,7 @@ body h1, h2 {
 	color: white;
 	font-weight: 200;
 	opacity: 0.9;
+	text-align: center;
 }
 
 /* body p, a {
@@ -33,7 +35,7 @@ body h1, h2 {
 }
 
 .content {
-	padding-bottom: 125px;
+	padding-bottom: 150px;
 }
 
 /* This is stuff that goes in the fixed header */
@@ -104,36 +106,29 @@ body h1, h2 {
 
 	.section {
 		position: relative;
-		text-align: center;
-		padding-bottom: 30px;
-	}
-	
-	.section img {
-		width: 40%;
-		height: auto;
-		display: inline;
-		padding-top: 20px;
-		padding-bottom: 10px;
-	}
-	
-	.section iframe {
-		width: 40%;
-		height: 70vh;
-	}
-	
-	.section.bg {
-		/* background: #121212; */
-		margin: 0;
-		overflow: hidden;
-	}
-	
-	.section p {
+		padding-bottom: 1em;
 		width: 40%;
 		margin: 0 auto;
 	}
 	
+	.section img {
+		width: 90%;
+		display: block;
+		margin: 1em auto;
+	}
+	
+	.section iframe {
+		width: 100%;
+		height: 70vh;
+	}
+	
+	.section.bg {
+		margin: 0;
+		overflow: hidden;
+	}
+	
 	.section h2 {
-		margin-bottom: 5px;
+		margin: 0.5em 0;
 	}
 	
 	.section a {
@@ -149,19 +144,54 @@ body h1, h2 {
 	}
 	
 	#h2Link:hover {
-	color: #45a29e;
+		color: #45a29e;
 	}
 	
 	#thumb {
 		width: 20%;
 	}
+
+	/* project stuff */
 	
-	/*Stuff for dates specifically*/
+	.projects {
+		display: flex;
+		flex-wrap: wrap;
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	.project {
+		margin: 1em;
+		padding: 1em;
+		border-radius: 0.5em;
+		flex: 33%;
+		background-color: #14161d;
+		text-align: center;
+	}
+
+	.project a{
+		color:rgb(101, 212, 205);
+		text-decoration: none;
+	}
 	
-	.date {
-		font-style: italic;
-		color: #8e8e8e;
-		font-size: smaller;
+	.desc {
+		/* font-style: italic; */
+		color: #adadad;
+		/* font-size: smaller; */
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	/* Social Stuff */
+
+	.section.social {
+		text-align: center;
+	}
+
+	.social a {
+		font-size: 2em;
+		display: block;
+		margin: 1em 0;
 	}
 
 /*Footer Code*/
@@ -170,7 +200,6 @@ body h1, h2 {
 		position: absolute;
 		text-align: center;
 		background: #191b23;
-		color: white;
 		height: 125px;
 		bottom: 0;
 		width: 100%;
@@ -199,17 +228,15 @@ body {
 }
 
 .content {
-	padding-bottom: 100px;
+	padding-bottom: 125px;
+	margin-top: 3vh;
 }
 
 /*(MOBILE) This should be a NON-fixed header */
 
 	.header {
 		line-height: 35px;
-		width: 100%;
 		position: static;
-		z-index: 1738;
-		text-align: center;
 	}
 
 	.headerholder {
@@ -219,9 +246,6 @@ body {
 	/*(MOBILE) Just stuff for header links and text*/
 
 		.header a {
-			text-decoration: none;
-			padding: 17px;
-			transition: color 0.1s linear;
 			padding: 5px;
 		}
 		
@@ -253,15 +277,7 @@ body {
 /*(MOBILE) Section code */
 
 	.section {
-		position: relative;
-		text-align: center;
-		padding-bottom: 30px;
-	}
-	
-	.section img {
-		width: 70%;
-		height: auto;
-		display: inline;
+		width: 90%;
 	}
 	
 	.section iframe {
@@ -287,23 +303,18 @@ body {
 		width: 90%;
 		margin: 0 auto;
 	}
-	
-	.section a {
-		transition: color 0.1s linear;
+
+	.projects {
+		width: 90%;
 	}
-	
-	.section.social a {
-		text-decoration: none;
+
+	.project {
+		flex: 100%;
 	}
 
 /*(MOBILE) Footer Code*/
 
 	.footer {
-		position: absolute;
-		text-align: center;
-		color: white;
 		height: 100px;
-		bottom: 0;
-		width: 100%;
 	}
 }
