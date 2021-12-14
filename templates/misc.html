@@ -1,8 +1,14 @@
 {% extends "layout.html" %}
 
-{% macro project(title, link, desc) -%}
+{% macro project(title, link, thumb, desc) -%}
 <div class="section project">
     <h2><a href="{{ link }}">{{ title }}</a></h2>
+    {% if thumb != "" %}
+        {% set thumb_link = url_for('static', filename="images/thumbnails/"+thumb+".png") %}
+    {% else %}
+        {% set thumb_link = "" %}
+    {% endif %}
+    <img class="thumbnail" src="{{ thumb_link }}"/>
     <p class="desc">{{ desc }}</p>
 </div>
 {%- endmacro -%}
@@ -17,17 +23,17 @@
 
     <div class="projects">
 
-        {{ project("getsac.online", "https://getsac.online", "A simple 2D game that won 1st in Game Development at SacHacks III.") }}
+        {{ project("getsac.online", "https://getsac.online", "getsac", "A simple 2D game that won 1st in Game Development at SacHacks III.") }}
 
-        {{ project("UC Davis Automatic Schedule Builder", "https://timstewartj.github.io/UCDScheduleBuilder/", "A tool that will automatically generate schedules given an input of classes.") }}
+        {{ project("UC Davis Automatic Schedule Builder", "https://timstewartj.github.io/UCDScheduleBuilder/", "ucdschgen", "A tool that will automatically generate schedules given an input of classes.") }}
 
-        {{ project("Elliptical Illusion","https://334.itch.io/elliptical-illusion","A quick 2D game made for a game jam in early Summer of 2020.") }}
+        {{ project("Elliptical Illusion","https://334.itch.io/elliptical-illusion", "ellill", "A quick 2D game made for a game jam in early Summer of 2020.") }}
 
-        {{ project("UC Davis Major Planner","misc/UCDplanner","An extensive spreadsheet that makes it easier to plan classes for a major at UC Davis.") }}
+        {{ project("UC Davis Major Planner","misc/UCDplanner", "majplanner", "An extensive spreadsheet that makes it easier to plan classes for a major at UC Davis.") }}
 
-        {{ project("Career Expo Project","misc/careerexpo","A project for a class in high school.") }}
+        {{ project("Career Expo Project","misc/careerexpo", "cexpo", "A project for a class in high school.") }}
 
-        {{ project("Spreadsheets of Things I've Completed","misc/spreadsheet","Currently contains spreadsheets of movies I've watched and games I've completed.") }}
+        {{ project("Spreadsheets of Things I've Completed", "misc/spreadsheet", "spdsht", "Currently contains spreadsheets of movies I've watched and games I've completed.") }}
 
     </div>
     
