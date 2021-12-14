@@ -167,11 +167,16 @@ body h1, h2 {
 		flex: 33%;
 		background-color: #14161d;
 		text-align: center;
+		text-decoration: none;
+		transition: all 0.25s;
 	}
 
-	.project a{
+	.project:hover {
+		transform: scale(1.05);
+	}
+
+	.project h2{
 		color:rgb(101, 212, 205);
-		text-decoration: none;
 	}
 	
 	.desc {

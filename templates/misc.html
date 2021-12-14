@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 
 {% macro project(title, link, thumb, desc) -%}
-<div class="section project">
-    <h2><a href="{{ link }}">{{ title }}</a></h2>
+<a class="section project" href="{{ link }}"><div >
+    <h2>{{ title }}</h2>
     {% if thumb != "" %}
         {% set thumb_link = url_for('static', filename="images/thumbnails/"+thumb+".png") %}
     {% else %}
@@ -10,7 +10,7 @@
     {% endif %}
     <img class="thumbnail" src="{{ thumb_link }}"/>
     <p class="desc">{{ desc }}</p>
-</div>
+</div></a>
 {%- endmacro -%}
 
 {% block content %}
