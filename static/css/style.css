@@ -5,6 +5,7 @@ body {
 	color: #c5c6c7;
 	padding: 0;
 	margin: 0;
+	line-height: 1.5em;
 }
 
 body a:hover 
@@ -20,6 +21,7 @@ body h1, h2 {
 	color: white;
 	font-weight: 200;
 	opacity: 0.9;
+	text-align: center;
 }
 
 /* body p, a {
@@ -104,12 +106,14 @@ body h1, h2 {
 
 	.section {
 		position: relative;
-		text-align: center;
+		/* text-align: center; */
 		padding-bottom: 30px;
+		width: 40%;
+		margin: 0 auto;
 	}
 	
 	.section img {
-		width: 40%;
+		width: 100%;
 		height: auto;
 		display: inline;
 		padding-top: 20px;
@@ -117,19 +121,13 @@ body h1, h2 {
 	}
 	
 	.section iframe {
-		width: 40%;
+		width: 100%;
 		height: 70vh;
 	}
 	
 	.section.bg {
-		/* background: #121212; */
 		margin: 0;
 		overflow: hidden;
-	}
-	
-	.section p {
-		width: 40%;
-		margin: 0 auto;
 	}
 	
 	.section h2 {
@@ -164,13 +162,18 @@ body h1, h2 {
 		font-size: smaller;
 	}
 
+	/* Social Stuff */
+
+	.section.social {
+		text-align: center;
+	}
+
 /*Footer Code*/
 
 	.footer {
 		position: absolute;
 		text-align: center;
 		background: #191b23;
-		color: white;
 		height: 125px;
 		bottom: 0;
 		width: 100%;
@@ -200,16 +203,14 @@ body {
 
 .content {
 	padding-bottom: 100px;
+	margin-top: 3vh;
 }
 
 /*(MOBILE) This should be a NON-fixed header */
 
 	.header {
 		line-height: 35px;
-		width: 100%;
 		position: static;
-		z-index: 1738;
-		text-align: center;
 	}
 
 	.headerholder {
@@ -219,9 +220,6 @@ body {
 	/*(MOBILE) Just stuff for header links and text*/
 
 		.header a {
-			text-decoration: none;
-			padding: 17px;
-			transition: color 0.1s linear;
 			padding: 5px;
 		}
 		
@@ -253,9 +251,7 @@ body {
 /*(MOBILE) Section code */
 
 	.section {
-		position: relative;
-		text-align: center;
-		padding-bottom: 30px;
+		width: 90%;
 	}
 	
 	.section img {
@@ -299,11 +295,6 @@ body {
 /*(MOBILE) Footer Code*/
 
 	.footer {
-		position: absolute;
-		text-align: center;
-		color: white;
 		height: 100px;
-		bottom: 0;
-		width: 100%;
 	}
 }
