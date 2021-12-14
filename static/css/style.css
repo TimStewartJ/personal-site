@@ -153,8 +153,22 @@ body h1, h2 {
 	#thumb {
 		width: 20%;
 	}
+
+	/* project stuff */
 	
-	/*Stuff for dates specifically*/
+	.projects {
+		display: flex;
+		flex-wrap: wrap;
+		width: 60%;
+		/* align-content: center; */
+		margin: 0 auto;
+	}
+
+	.project {
+		margin: 0 1em;
+		flex: 33%;
+		/* width: 33%; */
+	}
 	
 	.date {
 		font-style: italic;
