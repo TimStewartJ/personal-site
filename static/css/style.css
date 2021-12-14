@@ -106,8 +106,7 @@ body h1, h2 {
 
 	.section {
 		position: relative;
-		/* text-align: center; */
-		padding-bottom: 30px;
+		padding-bottom: 1em;
 		width: 40%;
 		margin: 0 auto;
 	}
@@ -131,7 +130,7 @@ body h1, h2 {
 	}
 	
 	.section h2 {
-		margin-bottom: 5px;
+		margin: 0.5em 0;
 	}
 	
 	.section a {
@@ -147,7 +146,7 @@ body h1, h2 {
 	}
 	
 	#h2Link:hover {
-	color: #45a29e;
+		color: #45a29e;
 	}
 	
 	#thumb {
@@ -160,20 +159,29 @@ body h1, h2 {
 		display: flex;
 		flex-wrap: wrap;
 		width: 60%;
-		/* align-content: center; */
 		margin: 0 auto;
 	}
 
 	.project {
-		margin: 0 1em;
+		margin: 1em;
+		padding: 1em;
+		border-radius: 0.5em;
 		flex: 33%;
-		/* width: 33%; */
+		background-color: #14161d;
+		text-align: center;
+	}
+
+	.project a{
+		color:rgb(101, 212, 205);
+		text-decoration: none;
 	}
 	
-	.date {
-		font-style: italic;
-		color: #8e8e8e;
-		font-size: smaller;
+	.desc {
+		/* font-style: italic; */
+		color: #adadad;
+		/* font-size: smaller; */
+		width: 60%;
+		margin: 0 auto;
 	}
 
 	/* Social Stuff */
@@ -296,14 +304,6 @@ body {
 	.section p {
 		width: 90%;
 		margin: 0 auto;
-	}
-	
-	.section a {
-		transition: color 0.1s linear;
-	}
-	
-	.section.social a {
-		text-decoration: none;
 	}
 
 /*(MOBILE) Footer Code*/
