@@ -112,11 +112,9 @@ body h1, h2 {
 	}
 	
 	.section img {
-		width: 100%;
-		height: auto;
-		display: inline;
-		padding-top: 20px;
-		padding-bottom: 10px;
+		width: 90%;
+		display: block;
+		margin: 1em auto;
 	}
 	
 	.section iframe {
@@ -282,12 +280,6 @@ body {
 		width: 90%;
 	}
 	
-	.section img {
-		width: 70%;
-		height: auto;
-		display: inline;
-	}
-	
 	.section iframe {
 		width: 625px;
 		height: 600px;
@@ -310,6 +302,14 @@ body {
 	.section p {
 		width: 90%;
 		margin: 0 auto;
+	}
+
+	.projects {
+		width: 90%;
+	}
+
+	.project {
+		flex: 100%;
 	}
 
 /*(MOBILE) Footer Code*/
