@@ -190,6 +190,12 @@ body h1, h2 {
 		text-align: center;
 	}
 
+	.social a {
+		font-size: 2em;
+		display: block;
+		margin: 1em 0;
+	}
+
 /*Footer Code*/
 
 	.footer {

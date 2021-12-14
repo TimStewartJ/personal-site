@@ -1,21 +1,31 @@
-{% extends "layout.html" %}
-
-{% block head %}
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block head %}
+<link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+/>
+{% endblock %} {% block content %}
+{% macro link(title, link, icon) %}
+<a
+    href="{{ link }}"
+    target="_blank"
+    rel="noreferrer noopener"
+    ><i class="fab fa-{{ icon }}"></i> {{ title }}</a
+>
+{% endmacro %}
 <div class="content">
-
     <div class="section social">
         <h1>My Socials</h1>
-        <h2><a href="https://github.com/TimStewartJ" target="_blank" rel="noreferrer noopener"><i class="fab fa-github" style="font-size:26px"></i> Github</a></h2>
-        <h2><a href="https://www.instagram.com/timstewartj/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram" style="font-size:26px"></i> Instagram</a></h2>
-        <h2><a href="https://www.youtube.com/channel/UCe95ZA30ro1-ANQyO1wXVzA" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube" style="font-size:26px"></i> YouTube</a></h2>
-        <h2><p href=""><i class="fab fa-discord" style="font-size:26px"></i> timmie#6383</p></h2>
-        <h2><a href=""><i class="fa fa-" style="font-size:26px"></i> </a></h2>
-        <h2><a href=""><i class="fa fa-" style="font-size:26px"></i> </a></h2>
-        <h2><a href=""><i class="fa fa-" style="font-size:26px"></i> </a></h2>
+        <p>All links will redirect to a new tab.</p> 
+        {{ link("Github", "https://github.com/TimStewartJ", "github")}}
+
+        {{ link("Instagram", "https://instagram.com/timstewartj/", "instagram")}}
+
+        {{ link("YouTube", "https://www.youtube.com/channel/UCe95ZA30ro1-ANQyO1wXVzA", "youtube")}}
+
+        {{ link("timmie#6383", "https://discord.com/users/372696487290863618", "discord")}}
+
     </div>
 </div>
 {% endblock %}
