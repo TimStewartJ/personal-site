@@ -10,21 +10,9 @@ def index():
 def misc():
     return render_template('misc.html')
 
-@app.route("/misc/careerexpo")
-def misc_cexpo():
-    return render_template('misc/cexpo.html')
-
-@app.route("/misc/spreadsheet")
-def misc_spdsht():
-    return render_template('misc/spdsht.html')
-
-@app.route("/misc/zerosoda")
-def misc_zsoda():
-    return render_template('misc/zsoda.html')
-
-@app.route("/misc/UCDplanner")
-def misc_UCDplanner():
-    return render_template('misc/UCDMajorPlanner.html')
+@app.route("/misc/<misc_page>")
+def misc_page(misc_page):
+    return render_template('misc/' + misc_page + '.html')
 
 @app.route("/portfolio")
 def portfolio():
