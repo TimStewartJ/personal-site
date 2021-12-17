@@ -6,6 +6,7 @@ body {
 	padding: 0;
 	margin: 0;
 	line-height: 1.5em;
+	letter-spacing: 0.025em;
 }
 
 body a:hover 
@@ -164,9 +165,8 @@ body h1, h2 {
 		margin: 1em;
 		padding: 1em;
 		border-radius: 0.5em;
-		flex: 33%;
+		flex: 25%;
 		background-color: #14161d;
-		text-align: center;
 		text-decoration: none;
 		transition: all 0.25s;
 	}
@@ -180,9 +180,8 @@ body h1, h2 {
 	}
 	
 	.desc {
-		/* font-style: italic; */
 		color: #adadad;
-		/* font-size: smaller; */
+		text-align: center;
 		width: 60%;
 		margin: 0 auto;
 	}
