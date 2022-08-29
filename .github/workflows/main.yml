@@ -38,5 +38,4 @@ jobs:
             key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
             port: 22
             script: | 
-              cd prog
               ./deploy-personal-site.sh
