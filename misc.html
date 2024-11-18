@@ -1,0 +1,32 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="content">
+  <div class="section">
+    <h1>Projects</h1>
+    <p>Here you can see various projects and other things that I have completed. The most recent entries are first.</p>
+  </div>
+
+  <div class="projects">
+    {% for post in site.posts %}
+
+    <a class="section project" href="{{ post.url }}">
+      <div>
+        <h2>{{ post.title }}</h2>
+        <img class="thumbnail" src="{{ post.thumb_link }}" aria-label="{{post.title}}" />
+        <p class="desc">{{ post.desc }}</p>
+      </div>
+    </a>
+
+    {% endfor %}
+    <!-- 
+        {{ project("getsac.online", "https://getsac.online", "getsac", "A simple 2D game that won 1st in Game Development at SacHacks III.") }}
+
+        {{ project("UC Davis Automatic Schedule Builder", "https://timstewartj.github.io/UCDScheduleBuilder/", "ucdschgen", "A tool that will automatically generate schedules given an input of classes.") }}
+
+        {{ project("Elliptical Illusion","https://334.itch.io/elliptical-illusion", "ellill", "A quick 2D game made for a game jam in early Summer of 2020.") }}
+ -->
+  </div>
+</div>
