@@ -12,7 +12,18 @@ title: Projects
   <div class="projects">
     {% for post in site.posts %}
 
-    <a class="section project" href="{{ post.url }}">
+    <a
+      class="section project"
+      href="{{ post.external_url | default: post.url }}"
+      {%
+      if
+      post.external_url
+      %}target="_blank"
+      rel="noopener noreferrer"
+      {%
+      endif
+      %}
+    >
       <div>
         <h2>{{ post.title }}</h2>
         <img class="thumbnail" src="{{ post.thumb_link }}" aria-label="{{post.title}}" />
@@ -21,12 +32,5 @@ title: Projects
     </a>
 
     {% endfor %}
-    <!-- 
-        {{ project("getsac.online", "https://getsac.online", "getsac", "A simple 2D game that won 1st in Game Development at SacHacks III.") }}
-
-        {{ project("UC Davis Automatic Schedule Builder", "https://timstewartj.github.io/UCDScheduleBuilder/", "ucdschgen", "A tool that will automatically generate schedules given an input of classes.") }}
-
-        {{ project("Elliptical Illusion","https://334.itch.io/elliptical-illusion", "ellill", "A quick 2D game made for a game jam in early Summer of 2020.") }}
- -->
   </div>
 </div>

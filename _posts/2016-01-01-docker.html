@@ -5,38 +5,36 @@ thumb_link: /assets/images/thumbnails/docker.png
 desc: My wonderful tribute to Docker.
 ---
 
-    <img src="{{ url_for('static', filename='images/thumbnails/docker.png') }}" />
-    <p class="desc">My wonderful tribute to Docker.</p>
+<img src="/assets/images/thumbnails/docker.png" />
+<p class="desc">My wonderful tribute to Docker.</p>
 
-    <h2>The Problem</h2>
-    <p>
-      In addition to this website, I host and maintain another website, Discord bot, and some game servers. Previously, I would run it all manually on
-      an old laptop sitting by a router under my desk. Any updates I wanted to make would require me ssh'ing in, running `git pull`, and then
-      performing whatever other steps would be necessary to get the service running. Setting up and configuring NGINX for multiple domains was simple
-      enough at first, but any time I needed to make changes or view my settings required me digging through `/etc` with many executions of `cat` and
-      `ls`.
-    </p>
-    <p>
-      Overall, the setup, while I was proud of it for figuring it out on my own, just felt clunky and unsustainable. Clearly, something new was
-      needed.
-    </p>
+<h2>The Problem</h2>
+<p>
+  In addition to this website, I host and maintain another website, Discord bot, and some game servers. Previously, I would run it all manually on an
+  old laptop sitting by a router under my desk. Any updates I wanted to make would require me ssh'ing in, running `git pull`, and then performing
+  whatever other steps would be necessary to get the service running. Setting up and configuring NGINX for multiple domains was simple enough at
+  first, but any time I needed to make changes or view my settings required me digging through `/etc` with many executions of `cat` and `ls`.
+</p>
+<p>
+  Overall, the setup, while I was proud of it for figuring it out on my own, just felt clunky and unsustainable. Clearly, something new was needed.
+</p>
 
-    <h2>The Solution</h2>
-    <p>
-      Enter Docker. Now, I don't need to fret over if I need to re-run `npm install` or worry about a million python virtual environments and how to
-      make all of them coexist peacefully. No, all I would need to do is run a few Docker commands and my service would be up and running! Just like
-      that! I so desperately wish I learned to apply Docker in my personal servers sooner. It's absolutely amazing and I wish for anyone doing any
-      sort of dev-ops to try it out.
-    </p>
+<h2>The Solution</h2>
+<p>
+  Enter Docker. Now, I don't need to fret over if I need to re-run `npm install` or worry about a million python virtual environments and how to make
+  all of them coexist peacefully. No, all I would need to do is run a few Docker commands and my service would be up and running! Just like that! I so
+  desperately wish I learned to apply Docker in my personal servers sooner. It's absolutely amazing and I wish for anyone doing any sort of dev-ops to
+  try it out.
+</p>
 
-    <h2>The Setup</h2>
-    <p>
-      For my websites, I now have each running in its own Docker container with a specific port exposed. Then, in the same environment, I have
-      <a href="https://github.com/nginx-proxy/nginx-proxy">nginx-proxy</a> and its
-      <a href="https://github.com/nginx-proxy/acme-companion">acme companion</a> running in their own Docker containers. They both handle literally
-      all of the ingress (with free SSL!) and it is truly joyous how it takes just a few commands to set that up. The Discord bot also resides in its
-      own container that sets up the Node.js environment and runs the bot with pm2 to allow for automatic restarts in the event it crashes.
-    </p>
+<h2>The Setup</h2>
+<p>
+  For my websites, I now have each running in its own Docker container with a specific port exposed. Then, in the same environment, I have
+  <a href="https://github.com/nginx-proxy/nginx-proxy">nginx-proxy</a> and its
+  <a href="https://github.com/nginx-proxy/acme-companion">acme companion</a> running in their own Docker containers. They both handle literally all of
+  the ingress (with free SSL!) and it is truly joyous how it takes just a few commands to set that up. The Discord bot also resides in its own
+  container that sets up the Node.js environment and runs the bot with pm2 to allow for automatic restarts in the event it crashes.
+</p>
 
-    <h2>The Conclusion</h2>
-    <p>Use Docker for anything hosted to hold onto sanity for just a little longer.</p>
+<h2>The Conclusion</h2>
+<p>Use Docker for anything hosted to hold onto sanity for just a little longer.</p>
