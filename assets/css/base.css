@@ -1,0 +1,34 @@
+/* Base styles */
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #c5c6c7;
+	padding: 0;
+	margin: 0;
+	line-height: 1.5em;
+	letter-spacing: 0.025em;
+}
+
+body a:hover 
+{
+	color: #45a29e;
+}
+
+body a {
+	color: #c5c6c7;
+}
+
+body h1, h2 {
+	color: white;
+	font-weight: 200;
+	opacity: 0.9;
+}
+
+.container {
+	position: relative;
+	min-height: 100vh;
+	background: #0b0c10;
+}
+
+.content {
+	padding-bottom: 150px;
+}

@@ -1,0 +1,83 @@
+/* Section and project styles */
+.section {
+	position: relative;
+	padding-bottom: 1em;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.section img {
+	width: 90%;
+	display: block;
+	margin: 1em auto;
+}
+
+.section iframe {
+	width: 100%;
+	height: 70vh;
+}
+
+.section.bg {
+	margin: 0;
+	overflow: hidden;
+}
+
+.section h2 {
+	margin: 0.5em 0;
+}
+
+.section a {
+	transition: color 0.1s linear;
+}
+
+.section.social a {
+	text-decoration: none;
+}
+
+#h2Link {
+	color: white;
+}
+
+#h2Link:hover {
+	color: #45a29e;
+}
+
+#thumb {
+	width: 20%;
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.project {
+	margin: 1em;
+	padding: 1em;
+	border-radius: 0.5em;
+	flex: 25%;
+	background-color: #14161d;
+	text-decoration: none;
+	transition: all 0.25s;
+}
+
+.post-date {
+	font-style: italic;
+}
+
+.project:hover {
+	transform: scale(1.05);
+}
+
+.project h2{
+	color:rgb(101, 212, 205);
+}
+
+.desc {
+	color: #adadad;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+}

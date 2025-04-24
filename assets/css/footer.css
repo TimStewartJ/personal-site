@@ -1,0 +1,9 @@
+/* Footer styles */
+.footer {
+	position: absolute;
+	text-align: center;
+	background: #191b23;
+	height: 125px;
+	bottom: 0;
+	width: 100%;
+}

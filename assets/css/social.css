@@ -1,0 +1,10 @@
+/* Social section styles */
+.section.social {
+	text-align: center;
+}
+
+.social a {
+	font-size: 2em;
+	display: block;
+	margin: 1em 0;
+}
