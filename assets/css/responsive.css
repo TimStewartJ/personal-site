@@ -1,0 +1,95 @@
+/* Responsive/mobile styles */
+@media (max-width: 498px) {
+body {
+	padding: 0;
+	margin: 0;
+	font-size:small;
+}
+
+.container {
+	position: relative;
+	min-height: 100vh;
+}
+
+.content {
+	padding-bottom: 125px;
+	margin-top: 3vh;
+}
+
+.header {
+	line-height: 35px;
+	position: static;
+}
+
+.headerholder {
+	height: 70px;
+}
+
+.header a {
+	padding: 5px;
+}
+
+.header h1 {
+	margin: 0px;
+	padding-top: 5px;
+}
+
+#headimg {
+	position: absolute;
+	width: auto;
+	height: 33px;
+	vertical-align: middle;
+	padding: 10px;
+	left: 50%;
+	transform: translate(-140px);
+}
+
+#logoimg {
+	position: absolute;
+	width: auto;
+	height: 33px;
+	vertical-align: middle;
+	padding: 10px;
+	left: 50%;
+	transform: translate(90px)
+}
+
+.section {
+	width: 90%;
+}
+
+.section iframe {
+	width: 625px;
+	height: 600px;
+}
+
+.section.bg {
+	margin: 0;
+	overflow: hidden;
+}
+
+.section h1 {
+	width: 95%;
+}
+
+.section h2 {
+	margin-bottom: 5px;
+}
+
+.section p {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.projects {
+	width: 90%;
+}
+
+.project {
+	flex: 100%;
+}
+
+.footer {
+	height: 100px;
+}
+}
