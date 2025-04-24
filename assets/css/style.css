@@ -171,6 +171,10 @@ body h1, h2 {
 		transition: all 0.25s;
 	}
 
+	.post-date {
+		font-style: italic;
+	}
+
 	.project:hover {
 		transform: scale(1.05);
 	}

@@ -16,8 +16,7 @@ title: Projects
       class="section project"
       href="{{ post.external_url | default: post.url }}"
       {%
-      if
-      post.external_url
+      if post.external_url
       %}target="_blank"
       rel="noopener noreferrer"
       {%
@@ -26,7 +25,12 @@ title: Projects
     >
       <div>
         <h2>{{ post.title }}</h2>
-        <img class="thumbnail" src="{{ post.thumb_link }}" aria-label="{{post.title}}" />
+        {% if post.start_date and post.end_date %}
+        <p class="post-date">{{ post.start_date | date: "%B %d, %Y" }} - {{ post.end_date | date: "%B %d, %Y" }}</p>
+        {% elsif post.start_date %}
+        <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        {% endif %}
+        <img class="thumbnail" src="{{ post.thumb_link }}" aria-label="{{ post.title }}" />
         <p class="desc">{{ post.desc }}</p>
       </div>
     </a>
