@@ -12,27 +12,21 @@ title: Projects
   <div class="projects">
     {% for post in site.posts %}
 
-    <a
-      class="section project"
-      href="{{ post.external_url | default: post.url }}"
-      {%
-      if post.external_url
-      %}target="_blank"
-      rel="noopener noreferrer"
-      {%
-      endif
-      %}
-    >
-      <div>
-        <h2>{{ post.title }}</h2>
-        {% if post.start_date and post.end_date %}
-        <p class="post-date">{{ post.start_date | date: "%B %d, %Y" }} - {{ post.end_date | date: "%B %d, %Y" }}</p>
-        {% elsif post.start_date %}
-        <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-        {% endif %}
-        <img class="thumbnail" src="{{ post.thumb_link }}" aria-label="{{ post.title }}" />
-        <p class="desc">{{ post.desc }}</p>
-      </div>
+    <a class="section project" href="{{ post.external_url | default: post.url }}" {% if post.external_url
+      %}target="_blank" rel="noopener noreferrer" {% endif %}>
+      <h2>{{ post.title }}</h2>
+      {% if post.start_date and post.end_date %}
+      <p class="post-date">{{ post.start_date | date: "%B %d, %Y" }} - {{ post.end_date | date: "%B %d, %Y" }}</p>
+      {% elsif post.start_date %}
+      <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      {% endif %}
+      {% if post.thumb_link %}
+      <img class="thumbnail" src="{{ post.thumb_link }}" aria-label="{{ post.title }}" />
+      {% endif %}
+      {% if post.iframe %}
+      <iframe class="project-iframe" src="{{ post.iframe }}" frameborder="0" allowfullscreen></iframe>
+      {% endif %}
+      <p class="desc">{{ post.desc }}</p>
     </a>
 
     {% endfor %}
