@@ -58,9 +58,10 @@ body {
 	width: 90%;
 }
 
-.section iframe {
-	width: 625px;
-	height: 600px;
+/* Spreadsheet iframes need larger width for readability */
+.section .spreadsheet-iframe {
+width: 625px;
+height: 600px;
 }
 
 .section.bg {

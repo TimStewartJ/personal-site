@@ -72,6 +72,7 @@ transition: all 0.25s;
     display: block;
     box-sizing: border-box;
     flex-grow: 1;
+    min-height: 200px; /* Fallback for browsers without aspect-ratio support */
 }
 
 .post-date {
