@@ -54,15 +54,16 @@
 }
 
 .project {
-	margin: 1em;
-	padding: 1em;
-	border-radius: 0.5em;
-	flex: 25%;
-	background-color: #14161d;
-	text-decoration: none;
-	transition: all 0.25s;
+margin: 1em;
+padding: 1em;
+border-radius: 0.5em;
+flex: 25%;
+background-color: #14161d;
+text-decoration: none;
+transition: all 0.25s;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .project iframe {
@@ -86,5 +87,35 @@
 }
 
 .desc {
-	color: #adadad;
+color: #adadad;
+}
+
+/* External link indicator */
+.external-link-indicator {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: rgba(69, 162, 158, 0.2);
+    border-radius: 0.25em;
+    padding: 0.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: all 0.25s;
+}
+
+.external-link-indicator svg {
+    color: #45a29e;
+    width: 14px;
+    height: 14px;
+}
+
+.project:hover .external-link-indicator {
+    background-color: rgba(69, 162, 158, 0.3);
+    transform: scale(1.1);
+}
+
+.external-link-indicator:hover {
+    background-color: rgba(69, 162, 158, 0.4);
 }
