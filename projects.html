@@ -31,7 +31,7 @@ title: Projects
       <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
       {% endif %}
       {% if post.thumb_link %}
-      {% assign is_webm = post.thumb_link | endswith: '.webm' %}
+      {% assign is_webm = post.thumb_link | ends_with: '.webm' %}
       {% if is_webm %}
       <video class="thumbnail" autoplay loop muted aria-label="{{ post.title }}">
         <source src="{{ post.thumb_link }}" type="video/webm">
