@@ -69,6 +69,10 @@ jobs:
           ref: ${{ steps.preview.outputs.ref }}
           path: _preview_source
 
+      - name: Install preview dependencies
+        working-directory: _preview_source
+        run: bundle install
+
       - name: Build preview site
         working-directory: _preview_source
         run: |
