@@ -1,0 +1,10 @@
+title: TimStewartJ
+url: "https://timstewartj.com"
+baseurl: ""
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
