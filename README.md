@@ -27,3 +27,5 @@ For example, pushing a branch named `site-refresh` creates:
 https://timstewartj.com/previews/site-refresh/
 
 The preview workflow builds the production root from `main`, then builds the preview branch into the preview subdirectory before deploying one combined GitHub Pages artifact.
+
+A later production deploy from `main` replaces the published Pages artifact, so rerun the preview workflow or push the preview branch again if a preview URL disappears after a production deploy.
