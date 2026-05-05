@@ -20,7 +20,7 @@ https://github.com/TimStewartJ/personal-site/settings/pages
 
 ### Branch previews
 
-Branches other than `main` and `infra/**` are deployed as previews under `/previews/<branch-slug>/`.
+Branches other than `main` are deployed as previews under `/previews/<branch-slug>/`.
 
 For example, pushing a branch named `site-refresh` creates:
 
