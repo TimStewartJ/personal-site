@@ -16,6 +16,23 @@
 	--content-width: 42rem;
 	--wide-width: 50rem;
 	--grid-width: 56rem;
+	color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg: #f4efe6;
+		--surface: transparent;
+		--surface-soft: transparent;
+		--border: rgba(48, 43, 34, 0.2);
+		--text: #302b22;
+		--muted: #786d5d;
+		--heading: #181510;
+		--link: #7b4f1f;
+		--link-hover: #4f2f0d;
+		--accent: #7b4f1f;
+		color-scheme: light;
+	}
 }
 
 html {

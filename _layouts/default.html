@@ -3,22 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0f0e0b" />
+    <meta name="theme-color" content="#0f0e0b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)" />
     <title>{% if page.title %}{{ page.title }} | {% endif %}TimStewartJ</title>
-    {% if site.baseurl contains "/previews/" %}
-    <script>
-      (function () {
-        var shells = ["editorial", "paper", "index"];
-        var shell = new URLSearchParams(window.location.search).get("shell") || "editorial";
-
-        if (shells.indexOf(shell) === -1) {
-          shell = "editorial";
-        }
-
-        document.documentElement.dataset.shell = shell;
-      }());
-    </script>
-    {% endif %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon/favicon.ico" | relative_url }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | relative_url }}" />
@@ -55,55 +42,6 @@
         <p class="footer-title">The End</p>
         <p>All rights reserved {{ site.time | date: '%Y' }}.</p>
       </footer>
-
-      {% if site.baseurl contains "/previews/" %}
-      <aside class="shell-experiments" aria-label="Design experiments">
-        <span>try</span>
-        <button type="button" data-shell-choice="editorial">editorial</button>
-        <button type="button" data-shell-choice="paper">paper</button>
-        <button type="button" data-shell-choice="index">index</button>
-      </aside>
-      <script>
-        (function () {
-          var shells = ["editorial", "paper", "index"];
-          var themeColors = {
-            editorial: "#0f0e0b",
-            paper: "#f4efe6",
-            index: "#090b0d"
-          };
-          var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-shell-choice]"));
-          var metaTheme = document.querySelector('meta[name="theme-color"]');
-
-          function setShell(shell) {
-            if (shells.indexOf(shell) === -1) {
-              shell = "editorial";
-            }
-
-            document.documentElement.dataset.shell = shell;
-
-            if (metaTheme) {
-              metaTheme.setAttribute("content", themeColors[shell]);
-            }
-
-            buttons.forEach(function (button) {
-              button.setAttribute("aria-pressed", button.dataset.shellChoice === shell ? "true" : "false");
-            });
-
-            var url = new URL(window.location.href);
-            url.searchParams.set("shell", shell);
-            window.history.replaceState({}, "", url);
-          }
-
-          buttons.forEach(function (button) {
-            button.addEventListener("click", function () {
-              setShell(button.dataset.shellChoice);
-            });
-          });
-
-          setShell(document.documentElement.dataset.shell || "editorial");
-        }());
-      </script>
-      {% endif %}
     </div>
   </body>
 </html>
