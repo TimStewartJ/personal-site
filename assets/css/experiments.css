@@ -1,0 +1,126 @@
+/* Preview-only shell experiments */
+html[data-shell="paper"] {
+	--bg: #f4efe6;
+	--surface: transparent;
+	--surface-soft: transparent;
+	--border: rgba(48, 43, 34, 0.2);
+	--text: #302b22;
+	--muted: #786d5d;
+	--heading: #181510;
+	--link: #7b4f1f;
+	--link-hover: #4f2f0d;
+	--accent: #7b4f1f;
+}
+
+html[data-shell="index"] {
+	--bg: #090b0d;
+	--surface: transparent;
+	--surface-soft: transparent;
+	--border: rgba(210, 216, 219, 0.16);
+	--text: #d0d5d7;
+	--muted: #7f8a90;
+	--heading: #f4f7f8;
+	--link: #c3d0d4;
+	--link-hover: #ffffff;
+	--accent: #c3d0d4;
+	--font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--font-heading: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--wide-width: 58rem;
+	--grid-width: 64rem;
+}
+
+html[data-shell="index"] body {
+	font-size: 16px;
+	letter-spacing: 0.005em;
+}
+
+html[data-shell="index"] body h1,
+html[data-shell="index"] body h2 {
+	font-weight: 600;
+	letter-spacing: -0.03em;
+}
+
+html[data-shell="index"] .header,
+html[data-shell="index"] .footer,
+html[data-shell="index"] .section.wide {
+	width: min(90%, var(--grid-width));
+}
+
+html[data-shell="index"] #headimg {
+	display: block;
+	border-radius: 999px;
+}
+
+html[data-shell="index"] .projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	gap: 0;
+	width: min(90%, var(--grid-width));
+	border-left: 1px solid var(--border);
+}
+
+html[data-shell="index"] .project {
+	border-right: 1px solid var(--border);
+	padding: 1rem;
+	min-height: 12rem;
+}
+
+html[data-shell="index"] .project .thumbnail,
+html[data-shell="index"] .project iframe {
+	display: none;
+}
+
+.shell-experiments {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 1738;
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	color: var(--muted);
+	font-family: var(--font-ui);
+	font-size: 0.72rem;
+	line-height: 1;
+	padding: 0.45rem;
+}
+
+.shell-experiments span {
+	padding: 0 0.25rem;
+}
+
+.shell-experiments button {
+	appearance: none;
+	background: transparent;
+	border: 1px solid transparent;
+	color: var(--muted);
+	cursor: pointer;
+	font: inherit;
+	padding: 0.35rem 0.45rem;
+}
+
+.shell-experiments button:hover,
+.shell-experiments button[aria-pressed="true"] {
+	border-color: var(--border);
+	color: var(--heading);
+}
+
+@media (max-width: 640px) {
+	html[data-shell="index"] .projects {
+		display: block;
+		border-left: 0;
+	}
+
+	html[data-shell="index"] .project {
+		border-right: 0;
+		padding: 1.1rem 0;
+	}
+
+	.shell-experiments {
+		left: 1rem;
+		right: 1rem;
+		justify-content: center;
+	}
+}

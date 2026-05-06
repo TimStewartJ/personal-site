@@ -4,10 +4,14 @@
 	border-top: 1px solid var(--border);
 	color: var(--muted);
 	margin-top: auto;
-	padding: 2rem 1rem 2.25rem;
-	text-align: center;
-	width: 100%;
+	padding: 1.35rem 0 2.5rem;
+	text-align: left;
+	width: min(90%, var(--wide-width));
+	margin-left: auto;
+	margin-right: auto;
 	box-sizing: border-box;
+	font-family: var(--font-ui);
+	font-size: 0.78rem;
 }
 
 .footer p {
@@ -16,9 +20,10 @@
 
 .footer-title {
 	color: var(--heading);
-	font-size: 0.85rem;
-	font-weight: 600;
-	letter-spacing: 0.12em;
+	font-family: var(--font-body);
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0;
 	margin-bottom: 0.45rem;
-	text-transform: uppercase;
 }
