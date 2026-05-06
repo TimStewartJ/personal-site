@@ -65,10 +65,11 @@
 }
 
 .projects {
-	display: block;
-	width: min(90%, var(--wide-width));
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+	gap: 1rem;
+	width: min(90%, var(--grid-width));
 	margin: 0 auto;
-	border-bottom: 1px solid var(--border);
 }
 
 .project-section {
@@ -78,13 +79,14 @@
 
 .project {
 	margin: 0;
-	padding: 1.25rem 0;
-	border: 0;
-	border-top: 1px solid var(--border);
-	border-radius: 0;
-	background-color: transparent;
+	width: auto;
+	padding: 1rem;
+	border: 1px solid var(--border);
+	border-radius: 0.18rem;
+	box-sizing: border-box;
+	background-color: var(--card-bg);
 	text-decoration: none;
-	transition: color 0.2s linear;
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s linear, transform 0.2s ease;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -93,7 +95,7 @@
 .project iframe {
 	width: 100%;
 	border: 1px solid var(--border);
-	border-radius: 0;
+	border-radius: 0.12rem;
 	display: block;
 	box-sizing: border-box;
 	flex-grow: 1;
@@ -119,7 +121,10 @@
 }
 
 .project:hover {
+	background-color: var(--card-bg-hover);
+	border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
 	color: var(--link-hover);
+	transform: translateY(-2px);
 }
 
 .project h2 {
@@ -134,11 +139,12 @@
 /* External link indicator */
 .external-link-indicator {
 	position: absolute;
-	top: 1.4rem;
-	right: 0;
-	background-color: transparent;
-	border-radius: 0;
-	padding: 0;
+	top: 0.75rem;
+	right: 0.75rem;
+	background-color: var(--card-bg-hover);
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	padding: 0.2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -153,11 +159,18 @@
 }
 
 .project:hover .external-link-indicator {
-	background-color: transparent;
+	background-color: var(--card-bg-hover);
 }
 
 .external-link-indicator:hover {
-	background-color: transparent;
+	background-color: var(--card-bg-hover);
+}
+
+.project .thumbnail {
+	width: 100%;
+	margin: 0.75rem 0 0.5rem;
+	border: 1px solid var(--border);
+	box-sizing: border-box;
 }
 
 video {
