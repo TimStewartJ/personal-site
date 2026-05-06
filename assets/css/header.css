@@ -52,7 +52,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	flex-wrap: wrap;
-	gap: 0;
+	gap: 0.65rem;
 	font-family: var(--font-ui);
 }
 
@@ -67,14 +67,8 @@
 	transition: color 0.15s linear;
 }
 
-.header nav a + a {
-	margin-left: 0.7rem;
-}
-
-.header nav a + a::before {
-	content: "/";
+.nav-separator {
 	color: var(--muted);
-	margin-right: 0.7rem;
 	opacity: 0.45;
 }
 
