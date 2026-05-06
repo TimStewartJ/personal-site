@@ -58,6 +58,10 @@ body {
 	width: 90%;
 }
 
+.section.wide {
+	width: 90%;
+}
+
 /* Spreadsheet iframes need larger width for readability */
 .section .spreadsheet-iframe {
 width: 625px;
@@ -84,6 +88,15 @@ height: 600px;
 
 .projects {
 	width: 90%;
+}
+
+.focus-grid,
+.now-grid {
+	grid-template-columns: 1fr;
+}
+
+.hero h1 {
+	font-size: 2.25em;
 }
 
 .project {

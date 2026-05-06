@@ -1,30 +1,71 @@
 ---
 layout: default
+title: Home
 ---
 <div class="content">
-    <div class="section">
-        <h1>Welcome</h1>
-        <p>
-            My name is Tim. I'm also known as timmie, tiimmie, or timstewartj 
-            most places on the internet as well. I am a software engineer at Microsoft. 
-	    My interests include the following:
-			<ul>
-				<li>coding</li>
-				<li>video games</li>
-				<li>mechanical keyboards</li>
-				<li>pc building</li>
-				<li>journaling</li>
-			</ul>
+    <div class="section wide hero">
+        <p class="eyebrow">software / systems / small useful tools</p>
+        <h1>Hi, I'm Tim.</h1>
+        <p class="lede">
+            I'm a software engineer in the Bay Area building tools at the intersection of AI, personal knowledge,
+            journaling, games, and practical life systems.
         </p>
+        <p>
+            Online I usually go by timmie, tiimmie, or timstewartj. This site is my home base for things I'm building,
+            notes I'm thinking through, and older projects that still feel like part of the story.
+        </p>
+        <div class="quick-links">
+            <a href="{{ "/projects" | relative_url }}">See the work</a>
+            <a href="{{ "/now" | relative_url }}">What I'm doing now</a>
+            <a href="{{ "/notes" | relative_url }}">Read notes</a>
+        </div>
+    </div>
 
+    <div class="section wide">
+        <h2>Current focus</h2>
+        <div class="focus-grid">
+            <div>
+                <h3>AI-assisted personal systems</h3>
+                <p>Local tools, task-aware agents, knowledge bases, schedules, and workflows that make AI useful outside a chat box.</p>
+            </div>
+            <div>
+                <h3>Human-centered software</h3>
+                <p>Apps like Circles that help people reflect, journal, and grow together instead of turning every interaction into a feed.</p>
+            </div>
+            <div>
+                <h3>Games and playful systems</h3>
+                <p>Factory games, board game ideas, Minecraft-adjacent tinkering, and systems that are fun because they are understandable.</p>
+            </div>
+            <div>
+                <h3>Small practical tools</h3>
+                <p>Browser extensions, spreadsheets, automations, and personal software that remove tiny bits of friction from real life.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section wide">
+        <h2>Featured work</h2>
+        <p>
+            A few current or representative projects. The older archive is still around too, because the through-line has always been
+            making useful or playful things for myself and the people around me.
+        </p>
+        <ul class="feature-list">
+            {% for post in site.posts %}
+            {% if post.featured %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span>{{ post.desc }}</span>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section wide">
         <h2>About the site</h2>
         <p>
-            You can find things that I'm working on, that I've done, and my
-            resume on this site. I try my best to keep it up to date, but it may
-            be a bit behind what I'm actually up to.
-        </p>
-        <p>
-            While it may not seem like much, it's enough for me to call home :)
+            The goal is not to be the most polished corner of the internet. It's to be accurate: a living record of what I'm building,
+            learning, and noticing. A little portfolio, a little notebook, and still enough for me to call home :)
         </p>
     </div>
 </div>

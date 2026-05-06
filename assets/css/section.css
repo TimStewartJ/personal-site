@@ -6,6 +6,77 @@
 	margin: 0 auto;
 }
 
+.section.wide {
+	width: 60%;
+}
+
+.hero h1 {
+	font-size: 3em;
+	line-height: 1.1em;
+	margin-bottom: 0.25em;
+}
+
+.eyebrow {
+	color: #66fcf1;
+	text-transform: uppercase;
+	font-size: 0.85em;
+	letter-spacing: 0.15em;
+}
+
+.lede {
+	font-size: 1.25em;
+	line-height: 1.6em;
+}
+
+.quick-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75em;
+	margin-top: 1.25em;
+}
+
+.quick-links a {
+	background: #14161d;
+	border: 1px solid rgba(102, 252, 241, 0.25);
+	border-radius: 0.5em;
+	padding: 0.75em 1em;
+	text-decoration: none;
+}
+
+.focus-grid,
+.now-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1em;
+}
+
+.focus-grid div,
+.now-grid div,
+.note-list {
+	background: #14161d;
+	border-radius: 0.5em;
+	padding: 1em;
+}
+
+.focus-grid h3 {
+	color: #66fcf1;
+	font-weight: 300;
+	margin-top: 0;
+}
+
+.feature-list {
+	padding-left: 1.25em;
+}
+
+.feature-list li {
+	margin-bottom: 0.9em;
+}
+
+.feature-list span {
+	color: #adadad;
+	display: block;
+}
+
 .section img {
 	width: 90%;
 	display: block;
@@ -53,6 +124,11 @@
 	margin: 0 auto;
 }
 
+.work-section {
+	padding-bottom: 0;
+	margin-top: 1em;
+}
+
 .project {
 margin: 1em;
 padding: 1em;
@@ -77,6 +153,14 @@ transition: all 0.25s;
 
 .post-date {
 	font-style: italic;
+}
+
+.project-meta {
+	color: #66fcf1;
+	display: flex;
+	gap: 0.5em;
+	font-size: 0.9em;
+	margin: 0;
 }
 
 .project:hover {

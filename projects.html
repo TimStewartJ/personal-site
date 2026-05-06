@@ -1,52 +1,38 @@
 ---
 layout: default
-title: Projects
+title: Work
+permalink: /projects/
 ---
 
 <div class="content">
-  <div class="section">
-    <h1>Projects</h1>
-    <p>Here you can see various projects and other things that I have completed. The most recent entries are first.</p>
+  <div class="section wide">
+    <h1>Work</h1>
+    <p>
+      Selected projects, experiments, and useful things I've built. The current work is first; the archive stays here because
+      older tools and game jam projects still show the same instinct: make the thing you wish existed.
+    </p>
   </div>
 
+  <div class="section wide work-section">
+    <h2>Featured work</h2>
+  </div>
   <div class="projects">
     {% for post in site.posts %}
+      {% if post.featured %}
+        {% include project-card.html project=post %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
-    <a class="section project" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}" {% if post.external_url
-      %}target="_blank" rel="noopener noreferrer" {% endif %}>
-      {% if post.external_url %}
-      <div class="external-link-indicator" aria-label="Opens in new tab">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15,3 21,3 21,9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-      </div>
-      {% endif %}
-      <h2>{{ post.title }}</h2>
-      {% if post.start_date and post.end_date %}
-      <p class="post-date">{{ post.start_date | date: "%B %d, %Y" }} - {{ post.end_date | date: "%B %d, %Y" }}</p>
-      {% elsif post.start_date %}
-      <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-      {% endif %}
-      {% if post.thumb_link %}
-      {% assign file_parts = post.thumb_link | split: '.' %}
-      {% assign extension = file_parts | last %}
-      {% if extension == 'webm' %}
-      <video class="thumbnail" autoplay loop muted aria-label="{{ post.title }}">
-        <source src="{{ post.thumb_link | relative_url }}" type="video/webm">
-      </video>
-      {% else %}
-      <img class="thumbnail" src="{{ post.thumb_link | relative_url }}" aria-label="{{ post.title }}" />
-      {% endif %}
-      {% endif %}
-      {% if post.iframe %}
-      <iframe class="project-iframe" src="{{ post.iframe }}" frameborder="0" allowfullscreen></iframe>
-      {% endif %}
-      <p class="desc">{{ post.desc }}</p>
-    </a>
-
+  <div class="section wide work-section">
+    <h2>Archive</h2>
+    <p>Older projects, experiments, and artifacts from school, hackathons, game jams, and internet tinkering.</p>
+  </div>
+  <div class="projects">
+    {% for post in site.posts %}
+      {% unless post.featured %}
+        {% include project-card.html project=post %}
+      {% endunless %}
     {% endfor %}
   </div>
 </div>
