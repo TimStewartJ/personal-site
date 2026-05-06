@@ -6,6 +6,21 @@
 	margin: 0 auto;
 }
 
+.section.wide {
+	width: 56%;
+}
+
+.hero h1 {
+	font-size: 3em;
+	line-height: 1.1em;
+	margin-bottom: 0.25em;
+}
+
+.lede {
+	font-size: 1.25em;
+	line-height: 1.6em;
+}
+
 .section img {
 	width: 90%;
 	display: block;
@@ -49,16 +64,22 @@
 .projects {
 	display: flex;
 	flex-wrap: wrap;
-	width: 60%;
+	width: 56%;
 	margin: 0 auto;
+}
+
+.project-section {
+	padding-bottom: 0;
+	margin-top: 1em;
 }
 
 .project {
 margin: 1em;
 padding: 1em;
-border-radius: 0.5em;
+border: 1px solid rgba(197, 198, 199, 0.16);
+border-radius: 0.2em;
 flex: 25%;
-background-color: #14161d;
+background-color: rgba(20, 22, 29, 0.45);
 text-decoration: none;
 transition: all 0.25s;
     display: flex;
@@ -79,8 +100,16 @@ transition: all 0.25s;
 	font-style: italic;
 }
 
+.project-meta {
+	color: #9bd9d6;
+	display: flex;
+	gap: 0.5em;
+	font-size: 0.9em;
+	margin: 0;
+}
+
 .project:hover {
-	transform: scale(1.05);
+	transform: translateY(-2px);
 }
 
 .project h2{

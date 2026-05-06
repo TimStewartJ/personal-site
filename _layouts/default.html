@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TimStewartJ</title>
+    <meta name="theme-color" content="#0b0c10" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}TimStewartJ</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon/favicon.ico" | relative_url }}" />
@@ -30,9 +31,8 @@ The fixed header
           <nav>
             <a href="{{ "/" | relative_url }}">Home</a>
             <a href="{{ "/projects" | relative_url }}">Projects</a>
-            <!-- <a href="/portfolio">Portfolio</a> -->
             <a href="{{ "/social" | relative_url }}">Social</a>
-            <a href="{{ "/assets/Resume.pdf" | relative_url }}" target="_blank" rel="noreferrer noopener">Resume</a>
+            <a href="{{ "/resume" | relative_url }}">Resume</a>
           </nav>
         </div>
       </div>

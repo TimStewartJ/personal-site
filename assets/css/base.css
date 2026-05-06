@@ -1,7 +1,12 @@
 /* Base styles */
+html {
+	background: #0b0c10;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #c5c6c7;
+	background: #0b0c10;
 	padding: 0;
 	margin: 0;
 	line-height: 1.5em;

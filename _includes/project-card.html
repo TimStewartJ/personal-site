@@ -1,0 +1,53 @@
+{% assign project = include.project %}
+{% if project.external_url %}
+  {% assign project_href = project.external_url %}
+{% else %}
+  {% assign project_href = project.url | relative_url %}
+{% endif %}
+
+<a class="section project" href="{{ project_href }}" {% if project.external_url %}target="_blank" rel="noopener noreferrer" {% endif %}>
+  {% if project.external_url %}
+  <div class="external-link-indicator" aria-label="Opens in new tab">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15,3 21,3 21,9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </svg>
+  </div>
+  {% endif %}
+
+  <h2>{{ project.title }}</h2>
+
+  {% if project.status or project.project_type %}
+  <p class="project-meta">
+    {% if project.status %}<span>{{ project.status }}</span>{% endif %}
+    {% if project.status and project.project_type %}<span aria-hidden="true">/</span>{% endif %}
+    {% if project.project_type %}<span>{{ project.project_type }}</span>{% endif %}
+  </p>
+  {% endif %}
+
+  {% if project.start_date and project.end_date %}
+  <p class="post-date">{{ project.start_date | date: "%B %d, %Y" }} - {{ project.end_date | date: "%B %d, %Y" }}</p>
+  {% elsif project.start_date %}
+  <p class="post-date">{{ project.start_date | date: "%B %d, %Y" }}</p>
+  {% endif %}
+
+  {% if project.thumb_link %}
+  {% assign file_parts = project.thumb_link | split: '.' %}
+  {% assign extension = file_parts | last %}
+  {% if extension == 'webm' %}
+  <video class="thumbnail" autoplay loop muted aria-label="{{ project.title }}">
+    <source src="{{ project.thumb_link | relative_url }}" type="video/webm">
+  </video>
+  {% else %}
+  <img class="thumbnail" src="{{ project.thumb_link | relative_url }}" aria-label="{{ project.title }}" />
+  {% endif %}
+  {% endif %}
+
+  {% if project.iframe %}
+  <iframe class="project-iframe" src="{{ project.iframe }}" frameborder="0" allowfullscreen></iframe>
+  {% endif %}
+
+  <p class="desc">{{ project.desc }}</p>
+</a>
