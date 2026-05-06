@@ -7,7 +7,7 @@
 }
 
 .section.wide {
-	width: 60%;
+	width: 56%;
 }
 
 .hero h1 {
@@ -17,10 +17,10 @@
 }
 
 .eyebrow {
-	color: #66fcf1;
-	text-transform: uppercase;
+	color: #9bd9d6;
 	font-size: 0.85em;
-	letter-spacing: 0.15em;
+	letter-spacing: 0.08em;
+	font-style: italic;
 }
 
 .lede {
@@ -36,10 +36,8 @@
 }
 
 .quick-links a {
-	background: #14161d;
-	border: 1px solid rgba(102, 252, 241, 0.25);
-	border-radius: 0.5em;
-	padding: 0.75em 1em;
+	border-bottom: 1px solid rgba(102, 252, 241, 0.45);
+	padding: 0.1em 0;
 	text-decoration: none;
 }
 
@@ -53,9 +51,8 @@
 .focus-grid div,
 .now-grid div,
 .note-list {
-	background: #14161d;
-	border-radius: 0.5em;
-	padding: 1em;
+	border-left: 1px solid rgba(102, 252, 241, 0.25);
+	padding: 0.25em 0 0.25em 1em;
 }
 
 .focus-grid h3 {
@@ -120,7 +117,7 @@
 .projects {
 	display: flex;
 	flex-wrap: wrap;
-	width: 60%;
+	width: 56%;
 	margin: 0 auto;
 }
 
@@ -132,9 +129,10 @@
 .project {
 margin: 1em;
 padding: 1em;
-border-radius: 0.5em;
+border: 1px solid rgba(197, 198, 199, 0.16);
+border-radius: 0.2em;
 flex: 25%;
-background-color: #14161d;
+background-color: rgba(20, 22, 29, 0.45);
 text-decoration: none;
 transition: all 0.25s;
     display: flex;
@@ -156,7 +154,7 @@ transition: all 0.25s;
 }
 
 .project-meta {
-	color: #66fcf1;
+	color: #9bd9d6;
 	display: flex;
 	gap: 0.5em;
 	font-size: 0.9em;
@@ -164,7 +162,7 @@ transition: all 0.25s;
 }
 
 .project:hover {
-	transform: scale(1.05);
+	transform: translateY(-2px);
 }
 
 .project h2{

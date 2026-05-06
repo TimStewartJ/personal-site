@@ -4,7 +4,7 @@ title: "YouTube Summarizer with Gemini"
 start_date: 2025-06-03
 end_date: Present
 thumb_link: /assets/images/thumbnails/YtExtensionHero.webm
-desc: A Firefox extension that opens Gemini in the sidebar to summarize YouTube videos without leaving the page.
+desc: A Firefox extension I made so I can summarize YouTube videos without leaving the page.
 categories: [projects, browser-extension, productivity, ai]
 featured: true
 status: Shipped
@@ -12,29 +12,32 @@ project_type: Browser extension
 ---
 
 <h1>YouTube Summarizer with Gemini</h1>
-<p><strong>A Firefox extension that instantly summarizes YouTube videos using Google's Gemini AI.</strong></p>
+<p><strong>A small Firefox extension for getting the gist of a YouTube video without opening another tab.</strong></p>
 
 <video autoplay loop muted>
   <source src="{{ "/assets/images/thumbnails/YtExtensionHero.webm" | relative_url }}" type="video/webm">
 </video>
 
-<h2>The Problem</h2>
+<h2>Why I made it</h2>
 <p>
-    YouTube is full of content with clickbait titles and thumbnails that can really suck you in.
-    AI is great at summarizing videos, but it's really inconvenient to have to copy the video link, open a new tab, and paste it into an AI tool just to get a summary.
-    What's the best way to get these summaries without leaving YouTube?
+    YouTube is very good at making everything look worth clicking. Sometimes I just want to know
+    whether a video is actually useful before I give it twenty minutes. Copying links into another tab
+    was annoying enough that it felt worth turning into a button.
 </p>
 
-<h2>The Solution</h2>
-<p>I built the YouTube Summarizer with Gemini - a Firefox extension that allows you to quickly summarize YouTube videos in the Firefox sidebar without leaving the page.</p>
+<h2>What it does</h2>
+<p>
+  The extension opens Gemini in Firefox's sidebar with the current video ready to summarize. It is not complicated,
+  but it removes a tiny bit of friction from a thing I do often.
+</p>
 
-<h2>Key Features</h2>
+<h2>Details</h2>
 <ul>
-  <li><strong>🚀 One-Click Summarization:</strong> Click the extension icon on any YouTube video page to instantly open Gemini with a pre-filled summarization prompt</li>
-  <li><strong>🖱️ Right-Click Context Menu:</strong> Right-click on video thumbnails anywhere on YouTube to summarize videos without navigating to them</li>
-  <li><strong>📱 Sidebar Integration:</strong> Opens Gemini in a convenient sidebar panel for seamless multitasking</li>
-  <li><strong>✅ Auto-Mark as Watched:</strong> Automatically marks summarized videos as "Already Watched" to keep your YouTube feed clean</li>
-  <li><strong>⚙️ Customizable Settings:</strong> Configure prompt templates and toggle features through the options page</li>
+  <li>Summarize the video you are currently watching</li>
+  <li>Right-click a thumbnail and summarize it before opening the video</li>
+  <li>Use the Firefox sidebar so the summary stays next to YouTube</li>
+  <li>Optionally mark summarized videos as watched to keep the feed cleaner</li>
+  <li>Change the prompt template in the options page</li>
 </ul>
 
 <h2>How to Use</h2>
