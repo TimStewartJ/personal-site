@@ -1,71 +1,55 @@
 /* Responsive/mobile styles */
-@media (max-width: 498px) {
+@media (max-width: 640px) {
 body {
 	padding: 0;
 	margin: 0;
-	font-size:small;
-}
-
-.container {
-	position: relative;
-	min-height: 100vh;
+	font-size: 1rem;
 }
 
 .content {
-	padding-bottom: 125px;
-	margin-top: 3vh;
+	padding-top: 2rem;
 }
 
 .header {
-	line-height: 35px;
-	position: static;
+	width: min(90%, var(--grid-width));
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 0.65rem;
+	padding: 0.85rem 0;
 }
 
-.headerholder {
-	height: 70px;
+.header nav {
+	justify-content: flex-start;
 }
 
-.header a {
-	padding: 5px;
-}
-
-.header h1 {
-	margin: 0px;
-	padding-top: 5px;
+.header nav a {
+	padding: 0.3rem 0.45rem;
 }
 
 #headimg {
-	position: absolute;
-	width: auto;
-	height: 33px;
-	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(-140px);
+	height: 2rem;
 }
 
 #logoimg {
-	position: absolute;
-	width: auto;
-	height: 33px;
-	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(90px)
+	display: none;
+}
+
+#headtitle {
+	font-size: 1.05rem;
 }
 
 .section {
-	width: 90%;
+	width: min(90%, var(--content-width));
 }
 
 .section.wide {
-	width: 90%;
+	width: min(90%, var(--wide-width));
 }
 
 /* Spreadsheet iframes need larger width for readability */
 .section .spreadsheet-iframe {
-width: 625px;
-height: 600px;
+	width: 625px;
+	height: 600px;
 }
 
 .section.bg {
@@ -81,13 +65,8 @@ height: 600px;
 	margin-bottom: 5px;
 }
 
-.section p {
-	width: 90%;
-	margin: 0 auto;
-}
-
 .projects {
-	width: 90%;
+	width: min(90%, var(--grid-width));
 }
 
 .hero h1 {
@@ -95,10 +74,6 @@ height: 600px;
 }
 
 .project {
-	flex: 100%;
-}
-
-.footer {
-	height: 100px;
+	flex-basis: 100%;
 }
 }

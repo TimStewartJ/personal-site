@@ -1,9 +1,24 @@
 /* Footer styles */
 .footer {
-	position: absolute;
+	background: var(--surface-soft);
+	border-top: 1px solid var(--border);
+	color: var(--muted);
+	margin-top: auto;
+	padding: 2rem 1rem 2.25rem;
 	text-align: center;
-	background: #191b23;
-	height: 125px;
-	bottom: 0;
 	width: 100%;
+	box-sizing: border-box;
+}
+
+.footer p {
+	margin: 0;
+}
+
+.footer-title {
+	color: var(--heading);
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	margin-bottom: 0.45rem;
+	text-transform: uppercase;
 }

@@ -2,23 +2,24 @@
 .section {
 	position: relative;
 	padding-bottom: 1em;
-	width: 40%;
+	width: min(90%, var(--content-width));
 	margin: 0 auto;
 }
 
 .section.wide {
-	width: 56%;
+	width: min(90%, var(--wide-width));
 }
 
 .hero h1 {
-	font-size: 3em;
-	line-height: 1.1em;
-	margin-bottom: 0.25em;
+	font-size: clamp(2.35rem, 6vw, 3.5rem);
+	margin: 0 0 0.25em;
 }
 
 .lede {
-	font-size: 1.25em;
-	line-height: 1.6em;
+	color: var(--heading);
+	font-size: clamp(1.1rem, 2vw, 1.25rem);
+	line-height: 1.65;
+	max-width: 42rem;
 }
 
 .section img {
@@ -50,11 +51,11 @@
 }
 
 #h2Link {
-	color: white;
+	color: var(--heading);
 }
 
 #h2Link:hover {
-	color: #45a29e;
+	color: var(--link-hover);
 }
 
 #thumb {
@@ -64,7 +65,8 @@
 .projects {
 	display: flex;
 	flex-wrap: wrap;
-	width: 56%;
+	gap: 1rem;
+	width: min(90%, var(--grid-width));
 	margin: 0 auto;
 }
 
@@ -74,26 +76,26 @@
 }
 
 .project {
-margin: 1em;
-padding: 1em;
-border: 1px solid rgba(197, 198, 199, 0.16);
-border-radius: 0.2em;
-flex: 25%;
-background-color: rgba(20, 22, 29, 0.45);
-text-decoration: none;
-transition: all 0.25s;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+	margin: 0;
+	padding: 1rem;
+	border: 1px solid var(--border);
+	border-radius: 0.35rem;
+	flex: 1 1 17rem;
+	background-color: rgba(20, 22, 29, 0.45);
+	text-decoration: none;
+	transition: border-color 0.2s linear, transform 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 
 .project iframe {
-    width: 100%;
-    border-radius: 0.5em;
-    display: block;
-    box-sizing: border-box;
-    flex-grow: 1;
-    min-height: 200px; /* Fallback for browsers without aspect-ratio support */
+	width: 100%;
+	border-radius: 0.5em;
+	display: block;
+	box-sizing: border-box;
+	flex-grow: 1;
+	min-height: 200px;
 }
 
 .post-date {
@@ -109,36 +111,37 @@ transition: all 0.25s;
 }
 
 .project:hover {
+	border-color: rgba(139, 228, 223, 0.35);
 	transform: translateY(-2px);
 }
 
 .project h2{
-	color:rgb(101, 212, 205);
+	color: var(--link);
 }
 
 .desc {
-color: #adadad;
+	color: #adadad;
 }
 
 /* External link indicator */
 .external-link-indicator {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    background-color: rgba(69, 162, 158, 0.2);
-    border-radius: 0.25em;
-    padding: 0.25em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    transition: all 0.25s;
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	background-color: rgba(69, 162, 158, 0.2);
+	border-radius: 0.25em;
+	padding: 0.25em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	transition: all 0.25s;
 }
 
 .external-link-indicator svg {
-    color: #45a29e;
-    width: 14px;
-    height: 14px;
+	color: var(--accent);
+	width: 14px;
+	height: 14px;
 }
 
 .project:hover .external-link-indicator {
@@ -151,5 +154,5 @@ color: #adadad;
 }
 
 video {
-    width: 100%;
+	width: 100%;
 }

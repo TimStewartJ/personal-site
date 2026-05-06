@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0b0c10" />
     <title>{% if page.title %}{{ page.title }} | {% endif %}TimStewartJ</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon/favicon.ico" | relative_url }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | relative_url }}" />
@@ -16,35 +15,29 @@
 
   <body>
     <div class="container">
-      <!-- 
-Beginning of actual display
-The fixed header
--->
-
-      <div class="headerholder">
+      <header class="headerholder">
         <div class="header">
-          <img src="{{ "/assets/images/OffProf.png" | relative_url }}" id="headimg" /><img src="{{ "/assets/images/Logo.png" | relative_url }}" id="logoimg" />
-          <div id="headtitle">
-            <h1><a href="{{ "/" | relative_url }}">Tim Stewart</a></h1>
-          </div>
+          <a class="site-brand" href="{{ "/" | relative_url }}">
+            <img src="{{ "/assets/images/OffProf.png" | relative_url }}" id="headimg" alt="" aria-hidden="true" />
+            <span id="headtitle">Tim Stewart</span>
+            <img src="{{ "/assets/images/Logo.png" | relative_url }}" id="logoimg" alt="" aria-hidden="true" />
+          </a>
 
-          <nav>
-            <a href="{{ "/" | relative_url }}">Home</a>
-            <a href="{{ "/projects" | relative_url }}">Projects</a>
-            <a href="{{ "/social" | relative_url }}">Social</a>
-            <a href="{{ "/resume" | relative_url }}">Resume</a>
+          <nav aria-label="Primary">
+            <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
+            <a href="{{ "/projects" | relative_url }}"{% if page.url == "/projects/" or page.categories contains "projects" %} aria-current="page"{% endif %}>Projects</a>
+            <a href="{{ "/social" | relative_url }}"{% if page.url == "/social.html" %} aria-current="page"{% endif %}>Social</a>
+            <a href="{{ "/resume" | relative_url }}"{% if page.url == "/resume/" %} aria-current="page"{% endif %}>Resume</a>
           </nav>
         </div>
-      </div>
+      </header>
 
       {{content}}
 
-      <!-- The Footer -->
-
-      <div class="footer">
-        <h1>The End</h1>
+      <footer class="footer">
+        <p class="footer-title">The End</p>
         <p>All rights reserved {{ site.time | date: '%Y' }}.</p>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
