@@ -41,15 +41,13 @@
 	text-decoration: none;
 }
 
-.focus-grid,
-.now-grid {
+.focus-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 1em;
 }
 
 .focus-grid div,
-.now-grid div,
 .note-list {
 	border-left: 1px solid rgba(102, 252, 241, 0.25);
 	padding: 0.25em 0 0.25em 1em;
