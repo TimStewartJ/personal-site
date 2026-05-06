@@ -90,10 +90,6 @@ height: 600px;
 	width: 90%;
 }
 
-.focus-grid {
-	grid-template-columns: 1fr;
-}
-
 .hero h1 {
 	font-size: 2.25em;
 }

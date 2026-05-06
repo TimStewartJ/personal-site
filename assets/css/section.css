@@ -16,33 +16,9 @@
 	margin-bottom: 0.25em;
 }
 
-.eyebrow {
-	color: #9bd9d6;
-	font-size: 0.85em;
-	letter-spacing: 0.08em;
-	font-style: italic;
-}
-
 .lede {
 	font-size: 1.25em;
 	line-height: 1.6em;
-}
-
-.focus-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1em;
-}
-
-.focus-grid div {
-	border-left: 1px solid rgba(102, 252, 241, 0.25);
-	padding: 0.25em 0 0.25em 1em;
-}
-
-.focus-grid h3 {
-	color: #66fcf1;
-	font-weight: 300;
-	margin-top: 0;
 }
 
 .feature-list {
