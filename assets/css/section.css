@@ -28,27 +28,13 @@
 	line-height: 1.6em;
 }
 
-.quick-links {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.75em;
-	margin-top: 1.25em;
-}
-
-.quick-links a {
-	border-bottom: 1px solid rgba(102, 252, 241, 0.45);
-	padding: 0.1em 0;
-	text-decoration: none;
-}
-
 .focus-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 1em;
 }
 
-.focus-grid div,
-.note-list {
+.focus-grid div {
 	border-left: 1px solid rgba(102, 252, 241, 0.25);
 	padding: 0.25em 0 0.25em 1em;
 }
@@ -119,7 +105,7 @@
 	margin: 0 auto;
 }
 
-.work-section {
+.project-section {
 	padding-bottom: 0;
 	margin-top: 1em;
 }
