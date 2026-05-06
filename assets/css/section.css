@@ -21,19 +21,6 @@
 	line-height: 1.6em;
 }
 
-.feature-list {
-	padding-left: 1.25em;
-}
-
-.feature-list li {
-	margin-bottom: 0.9em;
-}
-
-.feature-list span {
-	color: #adadad;
-	display: block;
-}
-
 .section img {
 	width: 90%;
 	display: block;
