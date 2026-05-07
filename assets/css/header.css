@@ -35,18 +35,6 @@
 	white-space: nowrap;
 }
 
-#headimg,
-#logoimg {
-	width: auto;
-	height: 2rem;
-	display: none;
-}
-
-#logoimg {
-	height: 1.8rem;
-	opacity: 0.72;
-}
-
 .header nav {
 	display: flex;
 	align-items: center;
