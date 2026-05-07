@@ -19,7 +19,9 @@
       <header class="headerholder">
         <div class="header">
           <a class="site-brand" href="{{ "/" | relative_url }}">
+            <img class="brand-mark brand-mark-avatar" src="{{ "/assets/images/OffProf.png" | relative_url }}" alt="" aria-hidden="true" />
             <span id="headtitle">Tim Stewart</span>
+            <img class="brand-mark brand-mark-logo" src="{{ "/assets/images/Logo.png" | relative_url }}" alt="" aria-hidden="true" />
           </a>
 
           <nav aria-label="Primary">
@@ -41,5 +43,16 @@
         <p>All rights reserved {{ site.time | date: '%Y' }}.</p>
       </footer>
     </div>
+
+    <aside class="design-lab" data-design-lab hidden aria-label="Design options">
+      <p class="design-lab__label">Design options</p>
+      <div class="design-lab__options" role="group" aria-label="Design options">
+        <button type="button" data-design-option="current" aria-pressed="true">Current</button>
+        <button type="button" data-design-option="charm" aria-pressed="false">Original charm</button>
+        <button type="button" data-design-option="reader" aria-pressed="false">Reader</button>
+        <button type="button" data-design-option="lantern" aria-pressed="false">Lantern</button>
+      </div>
+    </aside>
+    <script src="{{ "/assets/js/design-lab.js" | relative_url }}"></script>
   </body>
 </html>
