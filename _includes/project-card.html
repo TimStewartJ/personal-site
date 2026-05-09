@@ -46,7 +46,7 @@
   {% endif %}
 
   {% if project.iframe %}
-  <iframe class="project-iframe" src="{{ project.iframe }}" title="{{ project.title }}" frameborder="0" allowfullscreen></iframe>
+  <iframe class="project-iframe" src="{{ project.iframe }}" title="{{ project.title }} preview" frameborder="0" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
   {% endif %}
 
   <p class="desc">{{ project.desc }}</p>
