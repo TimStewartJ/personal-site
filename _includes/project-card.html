@@ -37,16 +37,16 @@
   {% assign file_parts = project.thumb_link | split: '.' %}
   {% assign extension = file_parts | last %}
   {% if extension == 'webm' %}
-  <video class="thumbnail" autoplay loop muted aria-label="{{ project.title }}">
+  <video class="thumbnail" autoplay loop muted playsinline aria-hidden="true">
     <source src="{{ project.thumb_link | relative_url }}" type="video/webm">
   </video>
   {% else %}
-  <img class="thumbnail" src="{{ project.thumb_link | relative_url }}" aria-label="{{ project.title }}" />
+  <img class="thumbnail" src="{{ project.thumb_link | relative_url }}" alt="" />
   {% endif %}
   {% endif %}
 
   {% if project.iframe %}
-  <iframe class="project-iframe" src="{{ project.iframe }}" frameborder="0" allowfullscreen></iframe>
+  <iframe class="project-iframe" src="{{ project.iframe }}" title="{{ project.title }} preview" frameborder="0" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
   {% endif %}
 
   <p class="desc">{{ project.desc }}</p>
