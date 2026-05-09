@@ -7,7 +7,7 @@
 		return;
 	}
 
-	var designs = ['current', 'charm', 'reader', 'lantern'];
+	var designs = ['current', 'charm', 'reader', 'lantern', 'alley', 'rooftop', 'hideout'];
 	var params = new URLSearchParams(window.location.search);
 	var initialDesign = params.get('design');
 
