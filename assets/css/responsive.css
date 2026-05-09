@@ -46,18 +46,6 @@ body {
 	transform: none;
 }
 
-#logoimg {
-	position: absolute;
-	width: auto;
-	height: 33px;
-	vertical-align: middle;
-	padding: 7px;
-	right: 0.75em;
-	top: 0.25em;
-	left: auto;
-	transform: none;
-}
-
 .section {
 	width: 90%;
 }

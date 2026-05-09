@@ -59,14 +59,3 @@
 	transform: translate(-325px);
 	box-sizing: border-box;
 }
-
-#logoimg {
-	position: absolute;
-	width: auto;
-	height: 70px;
-	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(235px);
-	box-sizing: border-box;
-}
