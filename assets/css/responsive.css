@@ -13,13 +13,16 @@ body {
 
 .content {
 	padding-bottom: 125px;
-	margin-top: 3vh;
+	margin-top: 2vh;
 }
 
 .header {
-	line-height: 35px;
 	position: relative;
-	padding-bottom: 0.45em;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.55rem;
+	padding: 0.85rem 1rem 0.75rem;
+	text-align: center;
 }
 
 .headerholder {
@@ -27,23 +30,24 @@ body {
 }
 
 .header a {
-	padding: 5px;
+	padding: 0.2em 0.4em;
+}
+
+.header nav {
+	justify-content: center;
 }
 
 .header h1 {
-	margin: 0px;
-	padding-top: 5px;
+	margin: 0;
 }
 
 #headimg {
-	position: absolute;
 	width: auto;
-	height: 33px;
-	vertical-align: middle;
-	padding: 7px;
-	left: 0.75em;
-	top: 0.25em;
-	transform: none;
+	height: 42px;
+}
+
+.site-brand {
+	justify-content: center;
 }
 
 .section {
