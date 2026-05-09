@@ -1,9 +1,9 @@
 /* Responsive/mobile styles */
-@media (max-width: 498px) {
+@media (max-width: 640px) {
 body {
 	padding: 0;
 	margin: 0;
-	font-size:small;
+	font-size: 16px;
 }
 
 .container {
@@ -18,11 +18,12 @@ body {
 
 .header {
 	line-height: 35px;
-	position: static;
+	position: relative;
+	padding-bottom: 0.45em;
 }
 
 .headerholder {
-	height: 70px;
+	height: auto;
 }
 
 .header a {
@@ -39,9 +40,10 @@ body {
 	width: auto;
 	height: 33px;
 	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(-140px);
+	padding: 7px;
+	left: 0.75em;
+	top: 0.25em;
+	transform: none;
 }
 
 #logoimg {
@@ -49,9 +51,11 @@ body {
 	width: auto;
 	height: 33px;
 	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(90px)
+	padding: 7px;
+	right: 0.75em;
+	top: 0.25em;
+	left: auto;
+	transform: none;
 }
 
 .section {
@@ -88,6 +92,7 @@ height: 600px;
 
 .projects {
 	width: 90%;
+	gap: 0.9em;
 }
 
 .hero h1 {
@@ -95,7 +100,7 @@ height: 600px;
 }
 
 .project {
-	flex: 100%;
+	flex: 1 1 100%;
 }
 
 .footer {

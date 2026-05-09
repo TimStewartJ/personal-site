@@ -9,6 +9,8 @@
 	text-align: center;
 	box-shadow: 0px 1px 3px 0px black;
 	line-height: 40px;
+	min-height: 90px;
+	box-sizing: border-box;
 }
 
 .headerholder {
@@ -20,6 +22,14 @@
 	text-decoration: none;
 	padding: 12px;
 	transition: color 0.1s linear;	
+}
+
+.header nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0 0.25em;
 }
 
 .header h1 {
@@ -46,7 +56,8 @@
 	vertical-align: middle;
 	padding: 10px;
 	left: 50%;
-	transform: translate(-325px)
+	transform: translate(-325px);
+	box-sizing: border-box;
 }
 
 #logoimg {
@@ -56,5 +67,6 @@
 	vertical-align: middle;
 	padding: 10px;
 	left: 50%;
-	transform: translate(235px)
+	transform: translate(235px);
+	box-sizing: border-box;
 }
