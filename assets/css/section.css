@@ -64,6 +64,7 @@
 .projects {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 1em;
 	width: 56%;
 	margin: 0 auto;
 }
@@ -74,17 +75,18 @@
 }
 
 .project {
-margin: 1em;
-padding: 1em;
-border: 1px solid rgba(197, 198, 199, 0.16);
-border-radius: 0.2em;
-flex: 25%;
-background-color: rgba(20, 22, 29, 0.45);
-text-decoration: none;
-transition: all 0.25s;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+	margin: 0;
+	padding: 1em;
+	border: 1px solid rgba(197, 198, 199, 0.16);
+	border-radius: 0.2em;
+	flex: 1 1 16rem;
+	min-width: 0;
+	background-color: rgba(20, 22, 29, 0.45);
+	text-decoration: none;
+	transition: background-color 0.25s, border-color 0.25s, transform 0.25s;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 
 .project iframe {
@@ -109,15 +111,25 @@ transition: all 0.25s;
 }
 
 .project:hover {
+	background-color: rgba(20, 22, 29, 0.62);
+	border-color: rgba(101, 212, 205, 0.35);
 	transform: translateY(-2px);
+}
+
+.project:focus-visible {
+	outline: 2px solid #66fcf1;
+	outline-offset: 3px;
 }
 
 .project h2{
 	color:rgb(101, 212, 205);
+	margin-top: 0;
 }
 
 .desc {
-color: #adadad;
+	color: #adadad;
+	line-height: 1.55em;
+	margin-bottom: 0;
 }
 
 /* External link indicator */
@@ -152,4 +164,5 @@ color: #adadad;
 
 video {
     width: 100%;
+    border-radius: 0.5em;
 }

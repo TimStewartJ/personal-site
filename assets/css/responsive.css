@@ -1,9 +1,9 @@
 /* Responsive/mobile styles */
-@media (max-width: 498px) {
+@media (max-width: 640px) {
 body {
 	padding: 0;
 	margin: 0;
-	font-size:small;
+	font-size: 16px;
 }
 
 .container {
@@ -13,45 +13,41 @@ body {
 
 .content {
 	padding-bottom: 125px;
-	margin-top: 3vh;
+	margin-top: 2vh;
 }
 
 .header {
-	line-height: 35px;
-	position: static;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.55rem;
+	padding: 0.85rem 1rem 0.75rem;
+	text-align: center;
 }
 
 .headerholder {
-	height: 70px;
+	height: auto;
 }
 
 .header a {
-	padding: 5px;
+	padding: 0.2em 0.4em;
+}
+
+.header nav {
+	justify-content: center;
 }
 
 .header h1 {
-	margin: 0px;
-	padding-top: 5px;
+	margin: 0;
 }
 
 #headimg {
-	position: absolute;
 	width: auto;
-	height: 33px;
-	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(-140px);
+	height: 42px;
 }
 
-#logoimg {
-	position: absolute;
-	width: auto;
-	height: 33px;
-	vertical-align: middle;
-	padding: 10px;
-	left: 50%;
-	transform: translate(90px)
+.site-brand {
+	justify-content: center;
 }
 
 .section {
@@ -88,6 +84,7 @@ height: 600px;
 
 .projects {
 	width: 90%;
+	gap: 0.9em;
 }
 
 .hero h1 {
@@ -95,7 +92,7 @@ height: 600px;
 }
 
 .project {
-	flex: 100%;
+	flex: 1 1 100%;
 }
 
 .footer {
