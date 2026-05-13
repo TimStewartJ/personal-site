@@ -95,6 +95,11 @@ height: 600px;
 	flex: 1 1 100%;
 }
 
+.projects-page .project-section p {
+	margin: 0.25rem 0 1rem;
+	width: auto;
+}
+
 .footer {
 	height: 100px;
 }

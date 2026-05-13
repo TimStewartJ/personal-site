@@ -4,28 +4,48 @@ title: Projects
 permalink: /projects/
 ---
 
-<div class="content">
+{% assign current_project_titles = "Copilot Bridge|Mineless|Circles" | split: "|" %}
+{% assign selected_project_titles = "YouTube Summarizer with Gemini|GluChart" | split: "|" %}
+{% assign hidden_project_titles = "Career Expo Project" | split: "|" %}
+
+<div class="content projects-page">
   <div class="section wide">
     <h1>Projects</h1>
   </div>
 
   <div class="section wide project-section">
-    <h2>Active</h2>
+    <h2>Current</h2>
+    <p>Things I am actively building, shaping, using, or deciding the future of.</p>
   </div>
   <div class="projects">
-    {% for post in site.posts %}
-      {% if post.featured %}
-        {% include project-card.html project=post %}
+    {% for project_title in current_project_titles %}
+      {% assign project = site.posts | where: "title", project_title | first %}
+      {% if project %}
+        {% include project-card.html project=project %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="section wide project-section">
+    <h2>Selected Work</h2>
+    <p>Finished or stable projects that still feel representative of what I like to make.</p>
+  </div>
+  <div class="projects">
+    {% for project_title in selected_project_titles %}
+      {% assign project = site.posts | where: "title", project_title | first %}
+      {% if project %}
+        {% include project-card.html project=project %}
       {% endif %}
     {% endfor %}
   </div>
 
   <div class="section wide project-section">
     <h2>Archive</h2>
+    <p>Older, smaller, or more nostalgic things I still want to keep around.</p>
   </div>
   <div class="projects">
     {% for post in site.posts %}
-      {% unless post.featured %}
+      {% unless current_project_titles contains post.title or selected_project_titles contains post.title or hidden_project_titles contains post.title %}
         {% include project-card.html project=post %}
       {% endunless %}
     {% endfor %}
