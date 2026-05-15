@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Windows App Restarter"
+start_date: 2026-05-06
+end_date: Present
+desc: A tiny Windows tray utility for restarting the Windows App client and Explorer.
+categories: [projects, windows, utilities, csharp]
+featured: true
+status: Shipped
+project_type: Windows tray utility
+source_url: https://github.com/TimStewartJ/windows-app-restarter
+---
+
+<h1>Windows App Restarter</h1>
+<p><strong>A tiny tray utility for turning a repetitive Windows App restart script into one click.</strong></p>
+
+<h2>Why I made it</h2>
+<p>
+  I sometimes need to restart the Windows App / Windows 365 client processes and Explorer. The manual version
+  was a short PowerShell script, but it was still annoying enough that I wanted it as a tray action instead.
+</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Adds a Windows tray icon for quick access</li>
+  <li>Stops the Windows App client processes when they are running</li>
+  <li>Restarts Explorer and recreates the tray icon afterward</li>
+  <li>Can start automatically when signing in</li>
+  <li>Writes a local log file for troubleshooting</li>
+</ul>
+
+<h2>Why it belongs here</h2>
+<p>
+  This is one of my favorite kinds of small project: a narrow personal annoyance turned into a little tool
+  that is easier to reuse than the script it replaced.
+</p>
+
+<h2>Stack</h2>
+<p>C#, Windows tray app, .NET, PowerShell build scripts, and an installer build.</p>
+
+<h2>Links</h2>
+<p><a href="https://github.com/TimStewartJ/windows-app-restarter">Source on GitHub</a></p>
