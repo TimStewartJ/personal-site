@@ -4,45 +4,27 @@ title: Home
 ---
 <div class="content home-page">
   <div class="section wide hero home-hero">
-    <p class="eyebrow">Personal site / project archive</p>
+    <p class="eyebrow">Online / timmie / tiimmie / timstewartj</p>
     <h1>Tim <em>Stewart</em>.</h1>
     <p class="lede">
-      My name is Tim. Online I usually go by timmie, tiimmie, or timstewartj.
-    </p>
-    <p>
-      I'm a software engineer, and I like coding, video games, mechanical keyboards,
+      Software engineer. I like coding, video games, mechanical keyboards,
       PC building, journaling, and making small tools when I wish something existed.
     </p>
     <div class="meta-strip" aria-label="At a glance">
       <span>Software engineer</span>
-      <span>Personal tools</span>
-      <span>Games and journaling</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>Personal projects</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>Small useful tools</span>
     </div>
-    <p class="hero-actions">
-      <a class="button-link" href="{{ "/projects" | relative_url }}">See projects</a>
-      <a class="button-link button-link--secondary" href="{{ "/resume" | relative_url }}">View resume</a>
-    </p>
   </div>
 
-  <div class="section wide project-section">
-    <div class="project-section__row">
-      <h2>Currently building</h2>
-      <span class="project-section__hint">See all on Projects</span>
-    </div>
-    <p>Things I am actively building, shaping, using, or deciding the future of.</p>
-  </div>
-  <div class="projects home-projects">
-    {% for project_title in site.data.project_groups.current %}
-      {% assign project = site.posts | where: "title", project_title | first %}
-      {% if project %}
-        {% include project-card.html project=project %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div class="section-grid">
-    <section class="info-card">
+  <section class="section wide home-section" aria-labelledby="about-title">
+    <header class="home-section__head">
       <h2>About the site</h2>
+      <span>Home base</span>
+    </header>
+    <div class="home-copy">
       <p>
         You can find things that I'm working on, things that I've done, and my resume here.
         I try to keep it up to date, but it may still be a bit behind what I'm actually up to.
@@ -50,18 +32,42 @@ title: Home
       <p>
         While it may not seem like much, it's enough for me to call home :)
       </p>
-    </section>
+      <p>
+        A less formal view of my work lives on the <a href="{{ "/projects" | relative_url }}">Projects page</a>;
+        a more formal one is on the <a href="{{ "/resume" | relative_url }}">Resume</a>.
+      </p>
+    </div>
+  </section>
 
-    <section class="info-card">
+  <section class="section wide home-section" aria-labelledby="interests-title">
+    <header class="home-section__head">
       <h2>What I keep coming back to</h2>
-      <ul class="tag-list">
-        <li>Coding</li>
-        <li>Video games</li>
-        <li>Mechanical keyboards</li>
-        <li>PC building</li>
-        <li>Journaling</li>
-        <li>Small tools</li>
-      </ul>
-    </section>
-  </div>
+    </header>
+    <div class="interest-grid" role="list">
+      <div class="interest" role="listitem">
+        <span class="interest__name">Coding</span>
+        <span class="interest__detail">Small useful tools</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Games</span>
+        <span class="interest__detail">Playing and making</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Mechanical keyboards</span>
+        <span class="interest__detail">Builds, switches, layouts</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">PC building</span>
+        <span class="interest__detail">Towers, cables, quiet fans</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Journaling</span>
+        <span class="interest__detail">Solo and in small circles</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Personal projects</span>
+        <span class="interest__detail">Wishing things existed</span>
+      </div>
+    </div>
+  </section>
 </div>

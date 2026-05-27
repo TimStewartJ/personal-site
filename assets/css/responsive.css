@@ -110,9 +110,23 @@ body {
 	padding: var(--space-md);
 }
 
-.section-grid {
+.home-hero {
+	padding-top: var(--space-xl);
+}
+
+.home-hero h1 {
+	font-size: clamp(3.5rem, 17vw, 5.5rem);
+}
+
+.home-section__head {
+	align-items: flex-start;
+	flex-direction: column;
+	gap: var(--space-xs);
+	margin-bottom: var(--space-lg);
+}
+
+.interest-grid {
 	grid-template-columns: 1fr;
-	margin-top: var(--space-xl);
 }
 
 .resume-card {
