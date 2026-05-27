@@ -7,6 +7,26 @@ permalink: /projects/
 {% assign current_project_titles = "Copilot Bridge|Mineless|Circles" | split: "|" %}
 {% assign selected_project_titles = "Windows App Restarter|YouTube Summarizer with Gemini|The Mighty Architectury|GluChart" | split: "|" %}
 {% assign hidden_project_titles = "Career Expo Project" | split: "|" %}
+{% assign current_project_count = 0 %}
+{% for project_title in current_project_titles %}
+  {% assign project = site.posts | where: "title", project_title | first %}
+  {% if project %}
+    {% assign current_project_count = current_project_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% assign selected_project_count = 0 %}
+{% for project_title in selected_project_titles %}
+  {% assign project = site.posts | where: "title", project_title | first %}
+  {% if project %}
+    {% assign selected_project_count = selected_project_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% assign archive_project_count = 0 %}
+{% for post in site.posts %}
+  {% unless current_project_titles contains post.title or selected_project_titles contains post.title or hidden_project_titles contains post.title %}
+    {% assign archive_project_count = archive_project_count | plus: 1 %}
+  {% endunless %}
+{% endfor %}
 
 <div class="content projects-page">
   <div class="section wide">
@@ -14,7 +34,10 @@ permalink: /projects/
   </div>
 
   <div class="section wide project-section">
-    <h2>Current</h2>
+    <div class="project-section__row">
+      <h2>Current <span class="project-section__count">/ {% if current_project_count < 10 %}0{% endif %}{{ current_project_count }}</span></h2>
+      <span class="project-section__hint">Active work</span>
+    </div>
     <p>Things I am actively building, shaping, using, or deciding the future of.</p>
   </div>
   <div class="projects">
@@ -27,7 +50,10 @@ permalink: /projects/
   </div>
 
   <div class="section wide project-section">
-    <h2>Selected Work</h2>
+    <div class="project-section__row">
+      <h2>Selected Work <span class="project-section__count">/ {% if selected_project_count < 10 %}0{% endif %}{{ selected_project_count }}</span></h2>
+      <span class="project-section__hint">Representative projects</span>
+    </div>
     <p>Finished or stable projects that still feel representative of what I like to make.</p>
   </div>
   <div class="projects">
@@ -40,7 +66,10 @@ permalink: /projects/
   </div>
 
   <div class="section wide project-section">
-    <h2>Archive</h2>
+    <div class="project-section__row">
+      <h2>Archive <span class="project-section__count">/ {% if archive_project_count < 10 %}0{% endif %}{{ archive_project_count }}</span></h2>
+      <span class="project-section__hint">Older things</span>
+    </div>
     <p>Older, smaller, or more nostalgic things I still want to keep around.</p>
   </div>
   <div class="projects">

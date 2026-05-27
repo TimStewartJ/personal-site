@@ -5,7 +5,7 @@
   {% assign project_href = project.url | relative_url %}
 {% endif %}
 
-<a class="section project" href="{{ project_href }}" {% if project.external_url %}target="_blank" rel="noopener noreferrer" {% endif %}>
+<a class="project-card" href="{{ project_href }}" {% if project.external_url %}target="_blank" rel="noopener noreferrer" {% endif %}>
   {% if project.external_url %}
   <div class="external-link-indicator" aria-label="Opens in new tab">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -20,7 +20,7 @@
   <h2>{{ project.title }}</h2>
 
   {% if project.status or project.project_type %}
-  <p class="project-meta">
+  <p class="project-card__meta">
     {% if project.status %}<span>{{ project.status }}</span>{% endif %}
     {% if project.status and project.project_type %}<span aria-hidden="true">/</span>{% endif %}
     {% if project.project_type %}<span>{{ project.project_type }}</span>{% endif %}
@@ -28,9 +28,12 @@
   {% endif %}
 
   {% if project.start_date and project.end_date %}
-  <p class="post-date">{{ project.start_date | date: "%B %d, %Y" }} - {{ project.end_date | date: "%B %d, %Y" }}</p>
+  <p class="project-card__date">
+    {{ project.start_date | date: "%B %d, %Y" }} -
+    {% if project.end_date == "Present" %}Present{% else %}{{ project.end_date | date: "%B %d, %Y" }}{% endif %}
+  </p>
   {% elsif project.start_date %}
-  <p class="post-date">{{ project.start_date | date: "%B %d, %Y" }}</p>
+  <p class="project-card__date">{{ project.start_date | date: "%B %d, %Y" }}</p>
   {% endif %}
 
   {% if project.thumb_link %}
@@ -50,4 +53,5 @@
   {% endif %}
 
   <p class="desc">{{ project.desc }}</p>
+  <span class="project-card__cta">{% if project.external_url %}Open project{% else %}Read more{% endif %}</span>
 </a>
