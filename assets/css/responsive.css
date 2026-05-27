@@ -110,6 +110,33 @@ body {
 	padding: var(--space-md);
 }
 
+.section-grid {
+	grid-template-columns: 1fr;
+	margin-top: var(--space-xl);
+}
+
+.resume-card {
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.resume-card__actions {
+	width: 100%;
+}
+
+.resume-card__actions .button-link {
+	justify-content: center;
+}
+
+.social-row {
+	align-items: flex-start;
+	padding: var(--space-md);
+}
+
+.social-row__arrow {
+	font-size: 1.1rem;
+}
+
 .project-section__row {
 	align-items: flex-start;
 	flex-direction: column;

@@ -4,9 +4,9 @@ title: Projects
 permalink: /projects/
 ---
 
-{% assign current_project_titles = "Copilot Bridge|Mineless|Circles" | split: "|" %}
-{% assign selected_project_titles = "Windows App Restarter|YouTube Summarizer with Gemini|The Mighty Architectury|GluChart" | split: "|" %}
-{% assign hidden_project_titles = "Career Expo Project" | split: "|" %}
+{% assign current_project_titles = site.data.project_groups.current %}
+{% assign selected_project_titles = site.data.project_groups.selected %}
+{% assign hidden_project_titles = site.data.project_groups.hidden %}
 {% assign current_start_year = "" %}
 {% assign current_end_year = "" %}
 {% for project_title in current_project_titles %}

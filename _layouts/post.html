@@ -2,8 +2,29 @@
 layout: default
 ---
 
-<div class="content">
-  <div class="section">
-    {{ content }}
-  </div>
+<div class="content project-detail-page">
+  <article class="section project-detail">
+    {% if page.status or page.project_type or page.start_date or page.project_url or page.source_url or page.external_url %}
+    <div class="project-detail__meta" aria-label="Project summary">
+      {% if page.status %}<span>{{ page.status }}</span>{% endif %}
+      {% if page.project_type %}<span>{{ page.project_type }}</span>{% endif %}
+      {% if page.start_date %}
+        <span>
+          {{ page.start_date | date: "%B %Y" }}
+          {% if page.end_date %}
+            -
+            {% if page.end_date == "Present" %}Present{% else %}{{ page.end_date | date: "%B %Y" }}{% endif %}
+          {% endif %}
+        </span>
+      {% endif %}
+      {% if page.project_url %}<a href="{{ page.project_url }}" target="_blank" rel="noreferrer noopener">Open project</a>{% endif %}
+      {% if page.source_url %}<a href="{{ page.source_url }}" target="_blank" rel="noreferrer noopener">Source</a>{% endif %}
+      {% if page.external_url %}<a href="{{ page.external_url }}" target="_blank" rel="noreferrer noopener">External link</a>{% endif %}
+    </div>
+    {% endif %}
+
+    <div class="project-detail__body">
+      {{ content }}
+    </div>
+  </article>
 </div>

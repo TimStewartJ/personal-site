@@ -4,19 +4,34 @@ title: Resume
 permalink: /resume/
 ---
 
-<div class="content">
-  <div class="section wide">
-    <h1>Resume</h1>
-    <p>
+<div class="content resume-page">
+  <div class="section wide page-hero">
+    <p class="eyebrow">Formal view</p>
+    <h1>Resume.</h1>
+    <p class="lede">
       I keep the formal version as a PDF so it is easy to share, print, or send along.
     </p>
+  </div>
+
+  <div class="section wide resume-card">
+    <div>
+      <p class="resume-card__kicker">PDF resume</p>
+      <h2>The concise version.</h2>
+      <p>
+        Use this when you need the traditional document. It opens in a new tab,
+        and there is a download link if you want a local copy.
+      </p>
+    </div>
+    <div class="resume-card__actions">
+      <a class="button-link" href="{{ "/assets/Resume.pdf" | relative_url }}" target="_blank" rel="noreferrer noopener">View resume PDF</a>
+      <a class="button-link button-link--secondary" href="{{ "/assets/Resume.pdf" | relative_url }}" download>Download PDF</a>
+    </div>
+  </div>
+
+  <div class="section wide nudge-card">
+    <h2>Projects is the less formal picture.</h2>
     <p>
-      <a href="{{ "/assets/Resume.pdf" | relative_url }}" target="_blank" rel="noreferrer noopener">View resume PDF</a>
-      <span aria-hidden="true">/</span>
-      <a href="{{ "/assets/Resume.pdf" | relative_url }}" download>Download PDF</a>
-    </p>
-    <p>
-      For a less formal picture of what I make, the <a href="{{ "/projects" | relative_url }}">Projects</a> page is more useful.
+      The resume is useful, but the <a href="{{ "/projects" | relative_url }}">Projects</a> page is a better view of what I like making and why.
     </p>
   </div>
 </div>
