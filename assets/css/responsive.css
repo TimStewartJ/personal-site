@@ -116,10 +116,6 @@ body {
 	gap: var(--space-xs);
 }
 
-.project-section__hint {
-	display: none;
-}
-
 .projects-page .project-section p {
 	margin: 0.25rem 0 1rem;
 	width: auto;

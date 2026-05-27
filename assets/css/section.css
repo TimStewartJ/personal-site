@@ -94,14 +94,6 @@
 	margin: 0;
 }
 
-.project-section__count {
-	color: var(--color-accent-muted);
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
-	font-weight: 400;
-	letter-spacing: 0.06em;
-}
-
 .project-section__hint {
 	color: var(--color-meta);
 	font-family: var(--font-mono);

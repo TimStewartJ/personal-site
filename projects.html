@@ -7,26 +7,52 @@ permalink: /projects/
 {% assign current_project_titles = "Copilot Bridge|Mineless|Circles" | split: "|" %}
 {% assign selected_project_titles = "Windows App Restarter|YouTube Summarizer with Gemini|The Mighty Architectury|GluChart" | split: "|" %}
 {% assign hidden_project_titles = "Career Expo Project" | split: "|" %}
-{% assign current_project_count = 0 %}
+{% assign current_start_year = "" %}
+{% assign current_end_year = "" %}
 {% for project_title in current_project_titles %}
   {% assign project = site.posts | where: "title", project_title | first %}
   {% if project %}
-    {% assign current_project_count = current_project_count | plus: 1 %}
+    {% assign project_year = project.start_date | default: project.date | date: "%Y" %}
+    {% if current_start_year == "" or project_year < current_start_year %}
+      {% assign current_start_year = project_year %}
+    {% endif %}
+    {% if current_end_year == "" or project_year > current_end_year %}
+      {% assign current_end_year = project_year %}
+    {% endif %}
   {% endif %}
 {% endfor %}
-{% assign selected_project_count = 0 %}
+{% capture current_year_hint %}{% if current_start_year == current_end_year %}{{ current_start_year }}{% else %}{{ current_start_year }}-{{ current_end_year }}{% endif %}{% endcapture %}
+
+{% assign selected_start_year = "" %}
+{% assign selected_end_year = "" %}
 {% for project_title in selected_project_titles %}
   {% assign project = site.posts | where: "title", project_title | first %}
   {% if project %}
-    {% assign selected_project_count = selected_project_count | plus: 1 %}
+    {% assign project_year = project.start_date | default: project.date | date: "%Y" %}
+    {% if selected_start_year == "" or project_year < selected_start_year %}
+      {% assign selected_start_year = project_year %}
+    {% endif %}
+    {% if selected_end_year == "" or project_year > selected_end_year %}
+      {% assign selected_end_year = project_year %}
+    {% endif %}
   {% endif %}
 {% endfor %}
-{% assign archive_project_count = 0 %}
+{% capture selected_year_hint %}{% if selected_start_year == selected_end_year %}{{ selected_start_year }}{% else %}{{ selected_start_year }}-{{ selected_end_year }}{% endif %}{% endcapture %}
+
+{% assign archive_start_year = "" %}
+{% assign archive_end_year = "" %}
 {% for post in site.posts %}
   {% unless current_project_titles contains post.title or selected_project_titles contains post.title or hidden_project_titles contains post.title %}
-    {% assign archive_project_count = archive_project_count | plus: 1 %}
+    {% assign project_year = post.start_date | default: post.date | date: "%Y" %}
+    {% if archive_start_year == "" or project_year < archive_start_year %}
+      {% assign archive_start_year = project_year %}
+    {% endif %}
+    {% if archive_end_year == "" or project_year > archive_end_year %}
+      {% assign archive_end_year = project_year %}
+    {% endif %}
   {% endunless %}
 {% endfor %}
+{% capture archive_year_hint %}{% if archive_start_year == archive_end_year %}{{ archive_start_year }}{% else %}{{ archive_start_year }}-{{ archive_end_year }}{% endif %}{% endcapture %}
 
 <div class="content projects-page">
   <div class="section wide">
@@ -35,8 +61,8 @@ permalink: /projects/
 
   <div class="section wide project-section">
     <div class="project-section__row">
-      <h2>Current <span class="project-section__count">/ {% if current_project_count < 10 %}0{% endif %}{{ current_project_count }}</span></h2>
-      <span class="project-section__hint">Active work</span>
+      <h2>Current</h2>
+      <span class="project-section__hint">{{ current_year_hint }}</span>
     </div>
     <p>Things I am actively building, shaping, using, or deciding the future of.</p>
   </div>
@@ -51,8 +77,8 @@ permalink: /projects/
 
   <div class="section wide project-section">
     <div class="project-section__row">
-      <h2>Selected Work <span class="project-section__count">/ {% if selected_project_count < 10 %}0{% endif %}{{ selected_project_count }}</span></h2>
-      <span class="project-section__hint">Representative projects</span>
+      <h2>Selected Work</h2>
+      <span class="project-section__hint">{{ selected_year_hint }}</span>
     </div>
     <p>Finished or stable projects that still feel representative of what I like to make.</p>
   </div>
@@ -67,8 +93,8 @@ permalink: /projects/
 
   <div class="section wide project-section">
     <div class="project-section__row">
-      <h2>Archive <span class="project-section__count">/ {% if archive_project_count < 10 %}0{% endif %}{{ archive_project_count }}</span></h2>
-      <span class="project-section__hint">Older things</span>
+      <h2>Archive</h2>
+      <span class="project-section__hint">{{ archive_year_hint }}</span>
     </div>
     <p>Older, smaller, or more nostalgic things I still want to keep around.</p>
   </div>
