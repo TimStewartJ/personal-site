@@ -2,29 +2,72 @@
 layout: default
 title: Home
 ---
-<div class="content">
-    <div class="section wide hero">
-        <h1>Welcome</h1>
-        <p class="lede">
-            My name is Tim. Online I usually go by timmie, tiimmie, or timstewartj.
-        </p>
-        <p>
-            I'm a software engineer, and I like coding, video games, mechanical keyboards,
-            PC building, journaling, and making small tools when I wish something existed.
-        </p>
-        <p>
-            I keep projects I've made on the <a href="{{ "/projects" | relative_url }}">Projects</a> page.
-        </p>
+<div class="content home-page">
+  <div class="section wide hero home-hero">
+    <p class="eyebrow">Online / timmie / tiimmie / timstewartj</p>
+    <h1>Tim <em>Stewart</em>.</h1>
+    <p class="lede">
+      Software engineer. I like coding, video games, mechanical keyboards,
+      PC building, journaling, and making small tools when I wish something existed.
+    </p>
+    <div class="meta-strip" aria-label="At a glance">
+      <span>Software engineer</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>Personal projects</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>Small useful tools</span>
     </div>
+  </div>
 
-    <div class="section wide">
-        <h2>About the site</h2>
-        <p>
-            You can find things that I'm working on, things that I've done, and my resume here.
-            I try to keep it up to date, but it may still be a bit behind what I'm actually up to.
-        </p>
-        <p>
-            While it may not seem like much, it's enough for me to call home :)
-        </p>
+  <section class="section wide home-section" aria-labelledby="about-title">
+    <header class="home-section__head">
+      <h2>About the site</h2>
+      <span>Home base</span>
+    </header>
+    <div class="home-copy">
+      <p>
+        You can find things that I'm working on, things that I've done, and my resume here.
+        I try to keep it up to date, but it may still be a bit behind what I'm actually up to.
+      </p>
+      <p>
+        While it may not seem like much, it's enough for me to call home :)
+      </p>
+      <p>
+        A less formal view of my work lives on the <a href="{{ "/projects" | relative_url }}">Projects page</a>;
+        a more formal one is on the <a href="{{ "/resume" | relative_url }}">Resume</a>.
+      </p>
     </div>
+  </section>
+
+  <section class="section wide home-section" aria-labelledby="interests-title">
+    <header class="home-section__head">
+      <h2>What I keep coming back to</h2>
+    </header>
+    <div class="interest-grid" role="list">
+      <div class="interest" role="listitem">
+        <span class="interest__name">Coding</span>
+        <span class="interest__detail">Small useful tools</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Games</span>
+        <span class="interest__detail">Playing and making</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Mechanical keyboards</span>
+        <span class="interest__detail">Builds, switches, layouts</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">PC building</span>
+        <span class="interest__detail">Towers, cables, quiet fans</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Journaling</span>
+        <span class="interest__detail">Solo and in small circles</span>
+      </div>
+      <div class="interest" role="listitem">
+        <span class="interest__name">Personal projects</span>
+        <span class="interest__detail">Wishing things existed</span>
+      </div>
+    </div>
+  </section>
 </div>
