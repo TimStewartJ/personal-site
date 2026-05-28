@@ -169,6 +169,13 @@ body {
 	padding: var(--space-md);
 }
 
+.social-row__icon {
+	flex-basis: 2.4rem;
+	font-size: 1.05rem;
+	height: 2.4rem;
+	width: 2.4rem;
+}
+
 .social-row__arrow {
 	font-size: 1.1rem;
 }

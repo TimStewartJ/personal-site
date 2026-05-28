@@ -30,10 +30,34 @@
 	outline-offset: 3px;
 }
 
+.social-row__icon {
+	align-items: center;
+	background: var(--color-accent-wash);
+	border: 1px solid var(--color-border-soft);
+	border-radius: 999px;
+	color: var(--color-accent);
+	display: inline-flex;
+	flex: 0 0 2.75rem;
+	font-size: 1.25rem;
+	height: 2.75rem;
+	justify-content: center;
+	width: 2.75rem;
+}
+
+.social-row:hover .social-row__icon {
+	border-color: var(--color-accent-ring);
+	color: var(--color-text-strong);
+}
+
 .social-row__main,
 .social-row__top {
 	display: grid;
 	gap: var(--space-xs);
+}
+
+.social-row__main {
+	flex: 1;
+	min-width: 0;
 }
 
 .social-row__name {
