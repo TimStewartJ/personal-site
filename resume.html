@@ -6,32 +6,73 @@ permalink: /resume/
 
 <div class="content resume-page">
   <div class="section wide page-hero">
-    <p class="eyebrow">Formal view</p>
+    <p class="eyebrow">One page / formal version</p>
     <h1>Resume.</h1>
     <p class="lede">
-      I keep the formal version as a PDF so it is easy to share, print, or send along.
+      The short, shareable version of what I've built and where. The longer,
+      less formal version lives on the <a href="{{ "/projects" | relative_url }}">Projects page</a>.
     </p>
   </div>
 
-  <div class="section wide resume-card">
-    <div>
-      <p class="resume-card__kicker">PDF resume</p>
-      <h2>The concise version.</h2>
+  <section class="section wide page-section" aria-labelledby="pdf-title">
+    <header class="section-head">
+      <h2 id="pdf-title" class="section-head__title">The PDF</h2>
+      <p>I keep the formal version as a PDF so it is easy to share, print, or send along.</p>
+    </header>
+
+    <div class="resume-card">
+      <div>
+        <p class="resume-card__kicker">PDF resume</p>
+        <h3>Tim Stewart - Resume</h3>
+        <p>
+          Use this when you need the traditional document. It opens in a new tab,
+          and there is a download link if you want a local copy.
+        </p>
+      </div>
+      <div class="resume-card__actions">
+        <a class="button-link" href="{{ "/assets/Resume.pdf" | relative_url }}" target="_blank" rel="noreferrer noopener">View resume PDF</a>
+        <a class="button-link button-link--secondary" href="{{ "/assets/Resume.pdf" | relative_url }}" download>Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wide page-section" aria-labelledby="expect-title">
+    <header class="section-head">
+      <h2 id="expect-title" class="section-head__title">What to expect</h2>
+      <p>So you know what kind of document you are opening.</p>
+    </header>
+
+    <div class="preview-grid">
+      <div class="preview">
+        <span class="preview__num">01</span>
+        <span class="preview__title">Experience</span>
+        <span class="preview__detail">Roles, dates, and the work most relevant to software engineering.</span>
+      </div>
+      <div class="preview">
+        <span class="preview__num">02</span>
+        <span class="preview__title">Education</span>
+        <span class="preview__detail">The formal background behind the project work on this site.</span>
+      </div>
+      <div class="preview">
+        <span class="preview__num">03</span>
+        <span class="preview__title">Skills</span>
+        <span class="preview__detail">Languages, tools, and stacks I am comfortable working with.</span>
+      </div>
+      <div class="preview">
+        <span class="preview__num">04</span>
+        <span class="preview__title">Projects</span>
+        <span class="preview__detail">The compact version; Projects has the more personal context.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wide page-section">
+    <div class="nudge-card">
+      <span class="nudge-card__label">Friendly nudge</span>
+      <h2>Projects is the less formal picture.</h2>
       <p>
-        Use this when you need the traditional document. It opens in a new tab,
-        and there is a download link if you want a local copy.
+        The resume is useful, but the <a href="{{ "/projects" | relative_url }}">Projects</a> page is a better view of what I like making and why.
       </p>
     </div>
-    <div class="resume-card__actions">
-      <a class="button-link" href="{{ "/assets/Resume.pdf" | relative_url }}" target="_blank" rel="noreferrer noopener">View resume PDF</a>
-      <a class="button-link button-link--secondary" href="{{ "/assets/Resume.pdf" | relative_url }}" download>Download PDF</a>
-    </div>
-  </div>
-
-  <div class="section wide nudge-card">
-    <h2>Projects is the less formal picture.</h2>
-    <p>
-      The resume is useful, but the <a href="{{ "/projects" | relative_url }}">Projects</a> page is a better view of what I like making and why.
-    </p>
-  </div>
+  </section>
 </div>

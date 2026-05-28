@@ -59,6 +59,29 @@
 	font-size: 1.4rem;
 }
 
+.aside-note {
+	border: 1px solid var(--color-border-soft);
+	border-radius: var(--radius-md);
+	color: var(--color-muted);
+	margin-top: var(--space-xl);
+	padding: var(--space-lg);
+}
+
+.aside-note__label {
+	color: var(--color-accent-muted);
+	display: block;
+	font-family: var(--font-mono);
+	font-size: 0.78rem;
+	letter-spacing: 0.12em;
+	margin-bottom: var(--space-xs);
+	text-transform: uppercase;
+}
+
+.aside-note p {
+	margin: 0;
+	max-width: 42rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.social-row:hover {
 		transform: none;
