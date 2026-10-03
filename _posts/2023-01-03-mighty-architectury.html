@@ -3,10 +3,10 @@ layout: post
 title: "The Mighty Architectury"
 start_date: 2023-01-03
 end_date: Present
-desc: An experimental Architectury port of The Mighty Architect for Forge and Fabric compatibility.
+desc: A maintained port of The Mighty Architect for Fabric, NeoForge, and Forge, with more than 50,000 downloads.
 categories: [projects, minecraft, modding, java]
 featured: true
-status: Experimental
+status: Maintained
 project_type: Minecraft mod port
 project_url: https://modrinth.com/mod/the-mighty-architectury
 source_url: https://github.com/TimStewartJ/TheMightyArchitectury
@@ -14,7 +14,7 @@ thumb_link: /assets/images/thumbnails/mighty-architectury-hero.webm
 ---
 
 <h1>The Mighty Architectury</h1>
-<p><strong>An experimental Forge and Fabric compatibility port of The Mighty Architect.</strong></p>
+<p><strong>A maintained port of The Mighty Architect for Fabric, NeoForge, and Forge.</strong></p>
 
 <video autoplay loop muted playsinline>
   <source src="{{ "/assets/images/thumbnails/mighty-architectury-hero.webm" | relative_url }}" type="video/webm">
@@ -22,25 +22,29 @@ thumb_link: /assets/images/thumbnails/mighty-architectury-hero.webm
 
 <h2>What it is</h2>
 <p>
-  The Mighty Architectury is a port of simibubi's The Mighty Architect to an Architectury-based project.
-  The goal was to make the building-design mod work across Forge and Fabric using a shared codebase.
+  The Mighty Architectury is a port of simibubi's The Mighty Architect, a Minecraft mod for designing
+  elaborate buildings within a minute. It runs on Fabric, NeoForge, and Forge for Minecraft 1.19.4 to 26.3,
+  and it has been downloaded more than 50,000 times on Modrinth.
 </p>
 
 <h2>Why it was interesting</h2>
 <p>
   Minecraft modding has a lot of moving parts: loaders, mappings, shared abstractions, game-version drift,
-  and compatibility expectations from players. This project was a useful exercise in adapting an existing
-  mod into a cross-loader architecture instead of starting from scratch.
+  and compatibility expectations from players. It started in 2023 as an Architectury-based port, which is
+  where the name comes from. It no longer uses a third-party multiloader framework: each loader is built
+  with its own official toolkit, so the mod needs nothing at runtime beyond the loader itself, plus
+  Fabric API on Fabric. One source tree builds every supported Minecraft version.
 </p>
 
 <h2>Current State</h2>
 <p>
-  This is experimental. Some things may still be broken, but I like keeping it visible because it represents
-  a different kind of software work than the web apps and small utilities on this page.
+  Maintained. Every jar is tested the way it ships: the same client test harness runs against the packaged
+  mod on every supported version and loader, alongside a dedicated-server test and a JUnit suite. Bugs still
+  happen, and reports on GitHub are welcome.
 </p>
 
 <h2>Stack</h2>
-<p>Java, Minecraft modding, Architectury, Forge, and Fabric.</p>
+<p>Java, Gradle with Stonecutter, Fabric, NeoForge, and Forge.</p>
 
 <h2>Links</h2>
 <ul>
