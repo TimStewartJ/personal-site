@@ -4,9 +4,9 @@ title: Projects
 permalink: /projects/
 ---
 
-{% assign current_project_titles = "Copilot Bridge|Mineless|Circles" | split: "|" %}
-{% assign selected_project_titles = "Windows App Restarter|YouTube Summarizer with Gemini|The Mighty Architectury|GluChart" | split: "|" %}
-{% assign hidden_project_titles = "Career Expo Project" | split: "|" %}
+{% assign current_project_titles = site.data.project_groups.current %}
+{% assign selected_project_titles = site.data.project_groups.selected %}
+{% assign hidden_project_titles = site.data.project_groups.hidden %}
 {% assign current_start_year = "" %}
 {% assign current_end_year = "" %}
 {% for project_title in current_project_titles %}
@@ -55,17 +55,29 @@ permalink: /projects/
 {% capture archive_year_hint %}{% if archive_start_year == archive_end_year %}{{ archive_start_year }}{% else %}{{ archive_start_year }}-{{ archive_end_year }}{% endif %}{% endcapture %}
 
 <div class="content projects-page">
-  <div class="section wide">
-    <h1>Projects</h1>
+  <div class="section wide page-hero">
+    <p class="eyebrow">Work archive</p>
+    <h1>Projects.</h1>
+    <p class="lede">
+      Things I am actively building, finished or stable work that still feels representative,
+      and older projects I want to keep around.
+    </p>
+    <nav class="jump-nav" aria-label="Project sections">
+      <a href="#current">Current</a>
+      <a href="#selected-work">Selected Work</a>
+      <a href="#archive">Archive</a>
+    </nav>
   </div>
 
-  <div class="section wide project-section">
-    <div class="project-section__row">
-      <h2>Current</h2>
-      <span class="project-section__hint">{{ current_year_hint }}</span>
-    </div>
-    <p>Things I am actively building, shaping, using, or deciding the future of.</p>
-  </div>
+  <section id="current" class="section wide page-section project-section">
+    <header class="section-head">
+      <div class="section-head__row">
+        <h2 class="section-head__title">Current</h2>
+        <span class="section-head__hint">{{ current_year_hint }}</span>
+      </div>
+      <p>Things I am actively building, shaping, using, or deciding the future of.</p>
+    </header>
+  </section>
   <div class="projects">
     {% for project_title in current_project_titles %}
       {% assign project = site.posts | where: "title", project_title | first %}
@@ -75,13 +87,15 @@ permalink: /projects/
     {% endfor %}
   </div>
 
-  <div class="section wide project-section">
-    <div class="project-section__row">
-      <h2>Selected Work</h2>
-      <span class="project-section__hint">{{ selected_year_hint }}</span>
-    </div>
-    <p>Finished or stable projects that still feel representative of what I like to make.</p>
-  </div>
+  <section id="selected-work" class="section wide page-section project-section">
+    <header class="section-head">
+      <div class="section-head__row">
+        <h2 class="section-head__title">Selected Work</h2>
+        <span class="section-head__hint">{{ selected_year_hint }}</span>
+      </div>
+      <p>Finished or stable projects that still feel representative of what I like to make.</p>
+    </header>
+  </section>
   <div class="projects">
     {% for project_title in selected_project_titles %}
       {% assign project = site.posts | where: "title", project_title | first %}
@@ -91,13 +105,15 @@ permalink: /projects/
     {% endfor %}
   </div>
 
-  <div class="section wide project-section">
-    <div class="project-section__row">
-      <h2>Archive</h2>
-      <span class="project-section__hint">{{ archive_year_hint }}</span>
-    </div>
-    <p>Older, smaller, or more nostalgic things I still want to keep around.</p>
-  </div>
+  <section id="archive" class="section wide page-section project-section">
+    <header class="section-head">
+      <div class="section-head__row">
+        <h2 class="section-head__title">Archive</h2>
+        <span class="section-head__hint">{{ archive_year_hint }}</span>
+      </div>
+      <p>Older, smaller, or more nostalgic things I still want to keep around.</p>
+    </header>
+  </section>
   <div class="projects">
     {% for post in site.posts %}
       {% unless current_project_titles contains post.title or selected_project_titles contains post.title or hidden_project_titles contains post.title %}

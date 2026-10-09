@@ -1,10 +1,113 @@
-/* Social section styles */
-.section.social {
-	text-align: center;
+.social-list {
+	display: grid;
+	gap: var(--space-md);
 }
 
-.social a {
-	font-size: 2em;
+.social-row {
+	align-items: center;
+	background: rgba(20, 22, 29, 0.45);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	box-sizing: border-box;
+	color: var(--color-text);
+	display: flex;
+	gap: var(--space-md);
+	justify-content: space-between;
+	padding: var(--space-lg);
+	text-decoration: none;
+	transition: background-color 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.social-row:hover {
+	background: rgba(20, 22, 29, 0.62);
+	border-color: rgba(101, 212, 205, 0.35);
+	color: var(--color-text);
+	transform: translateY(-2px);
+}
+
+.social-row:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 3px;
+}
+
+.social-row__icon {
+	align-items: center;
+	background: var(--color-accent-wash);
+	border: 1px solid var(--color-border-soft);
+	border-radius: 999px;
+	color: var(--color-accent);
+	display: inline-flex;
+	flex: 0 0 2.75rem;
+	font-size: 1.25rem;
+	height: 2.75rem;
+	justify-content: center;
+	width: 2.75rem;
+}
+
+.social-row:hover .social-row__icon {
+	border-color: var(--color-accent-ring);
+	color: var(--color-text-strong);
+}
+
+.social-row__main,
+.social-row__top {
+	display: grid;
+	gap: var(--space-xs);
+}
+
+.social-row__main {
+	flex: 1;
+	min-width: 0;
+}
+
+.social-row__name {
+	color: var(--color-accent-mid);
+	font-size: 1.35rem;
+	line-height: 1.15;
+}
+
+.social-row__handle {
+	color: var(--color-meta);
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	letter-spacing: 0.04em;
+}
+
+.social-row__note {
+	color: var(--color-muted);
+	line-height: 1.55;
+}
+
+.social-row__arrow {
+	color: var(--color-accent);
+	font-size: 1.4rem;
+}
+
+.aside-note {
+	border: 1px solid var(--color-border-soft);
+	border-radius: var(--radius-md);
+	color: var(--color-muted);
+	margin-top: var(--space-xl);
+	padding: var(--space-lg);
+}
+
+.aside-note__label {
+	color: var(--color-accent-muted);
 	display: block;
-	margin: 1em 0;
+	font-family: var(--font-mono);
+	font-size: 0.78rem;
+	letter-spacing: 0.12em;
+	margin-bottom: var(--space-xs);
+	text-transform: uppercase;
+}
+
+.aside-note p {
+	margin: 0;
+	max-width: 42rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.social-row:hover {
+		transform: none;
+	}
 }
